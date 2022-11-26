@@ -1,0 +1,85 @@
+.container {
+    max-width: 1160px;
+    padding: 0px 15px;
+    margin: 0 auto;
+
+    @media(max-width:1400px) {
+        max-width: 992px;
+    }
+
+    @media(max-width:1024px) {
+        max-width: 730px;
+    }
+
+    @media(max-width:492px) {
+        max-width: 400px;
+    }
+}
+
+$mainFF: 'NunitoSans';
+$subFF: 'Nunito';
+$black: #100F00;
+$yellow: #FCE300;
+$hoverYellow: #FFED4D;
+
+body {
+    font-family: 'NunitoSans';
+    font-weight: 400;
+}
+
+.heading {
+    font-weight: 900;
+    color: #fff;
+    @include adaptiv-value("font-size", 20, 10, 1);
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    line-height: 120%;
+
+    &__main {
+        @include adaptiv-value("font-size", 100, 36, 1);
+        line-height: 130%;
+        text-shadow: 0px 10px 40px rgba(255, 255, 255, 0.64);
+    }
+}
+
+.label {}
+
+.text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: $black;
+    background-color: $yellow;
+    transition: all 0.4s ease 0s;
+    letter-spacing: 1.5px;
+    line-height: 170%;
+    padding: 18px 34px 18px 26px;
+    border-radius: 8px;
+    gap: 25px;
+    @include adaptiv-value("font-size", 14, 10, 1);
+
+    font-weight: 900;
+
+    &:before {
+        content: "";
+        display: block;
+        background-image: url(../img/icons/lighting.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        @include adaptiv-value("width", 20, 10, 1);
+        @include adaptiv-value("height", 36, 18, 1);
+
+    }
+
+    &:hover {
+        background-color: $hoverYellow;
+    }
+}
