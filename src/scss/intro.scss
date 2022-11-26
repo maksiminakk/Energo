@@ -18,12 +18,18 @@
             padding: calc(60px + var(--header-height)) 15px 60px 15px;
             display: block;
         }
+        @media(max-width:492px) {
+            padding-top: calc(62px + 65px);
+        }
 
     }
 
     &__body {}
 
     &__content {
+        @media(max-height:900px) {
+            margin-bottom: 40px;
+        }
        @media(max-width:1024px) {
         margin-bottom: 40px;
        }
@@ -132,9 +138,13 @@
         justify-content: center;
         @include adaptiv-value("width", 44, 32, 1);
         @include adaptiv-value("height", 44, 32, 1);
-        @include adaptiv-value("flex", 44, 32, 1);
+        flex: 0 0 calc(32px + 12 * ((100vw - 360px) / 950));
         background: rgba(255, 255, 255, 0.16);
         border-radius: 8px;
+        img {
+            @include adaptiv-value("width", 24, 17.5, 1);
+            @include adaptiv-value("height", 24, 17.5, 1);
+        }
     }
 
     &__label {
