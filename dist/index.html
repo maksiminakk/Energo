@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название</title>
+    <meta name="description" content="Описание">
+    <meta name="keywords" content="Ключевики">
+    <meta name="author" content="Автор">
+    <meta name="image" content="img/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Название">
+    <meta property="og:description" content="Описание">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:url" content="https://example.com">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/manifest.json">
+    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-title" content="Название">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header _white">
+    <div class="header__top header-top">
+        <div class="header-top__container container">
+            <div class="header-top__body">
+                <div class="header-top__row">
+                    <div class="header-top__item">
+                        <a href="/index.html" class="header-top__logo">
+                            <img src="img/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="header-top__item">
+                        <div class="header-top__left">
+                            <div class="header-top__items">
+                                <a href="" class="header-top__icon-item">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20.3027 3.48406C20.0138 3.49663 19.7486 3.57974 19.5156 3.67156C19.3004 3.75632 18.5275 4.08116 17.2969 4.59734C16.0662 5.11353 14.4355 5.79792 12.6973 6.52898C9.22084 7.99111 5.31424 9.63581 3.3125 10.4782C3.24376 10.5068 2.96459 10.5923 2.65625 10.8278C2.3472 11.0639 2.00391 11.5761 2.00391 12.1364C2.00391 12.5884 2.22952 13.0487 2.50195 13.3122C2.77439 13.5757 3.05049 13.6989 3.28125 13.7907V13.7887C4.06128 14.0995 6.39069 15.0316 6.94531 15.2536C7.14204 15.8431 7.98659 18.367 8.1875 19.0016H8.18555C8.32756 19.4508 8.46598 19.7436 8.6582 19.988C8.75431 20.1102 8.86904 20.2209 9.00977 20.3083C9.06376 20.3418 9.12355 20.3678 9.18359 20.3923C9.19196 20.3958 9.20059 20.3967 9.20898 20.4001L9.18555 20.3942C9.20296 20.4012 9.21858 20.4115 9.23633 20.4177C9.26524 20.4276 9.28529 20.4273 9.32422 20.4352C9.46122 20.4774 9.59798 20.5055 9.72461 20.5055C10.2682 20.5055 10.6016 20.2106 10.6016 20.2106L10.623 20.195L12.9707 18.2087L15.8457 20.8688C15.8982 20.943 16.3096 21.4997 17.2617 21.4997C17.8298 21.4997 18.279 21.2185 18.5664 20.9235C18.8538 20.6286 19.0328 20.3267 19.1133 19.9177L19.1152 19.9157C19.1794 19.5855 21.9316 5.76531 21.9316 5.76531L21.9258 5.78875C22.0114 5.4064 22.0367 5.03665 21.9355 4.65984C21.8344 4.28304 21.5613 3.91531 21.2324 3.72234C20.9036 3.52937 20.5917 3.47149 20.3027 3.48406ZM19.9082 5.67351C19.7994 6.21954 17.334 18.6056 17.1816 19.3825L13.0293 15.5407L10.2227 17.9137L11 14.8747C11 14.8747 16.3625 9.44655 16.6855 9.13055C16.9455 8.87755 17 8.78886 17 8.70086C17 8.58386 16.9398 8.49969 16.8008 8.49969C16.6758 8.49969 16.506 8.61947 16.416 8.67547C15.2724 9.38847 10.4013 12.1644 8.00586 13.527C7.8617 13.4692 5.6974 12.6001 4.53125 12.1345C6.60551 11.2615 10.1612 9.76549 13.4727 8.37273C15.2106 7.64179 16.8408 6.95678 18.0703 6.44109C19.1082 6.00578 19.6495 5.78039 19.9082 5.67351ZM17.1523 19.5251H17.1543C17.1543 19.5253 17.1524 19.5306 17.1523 19.5309C17.1536 19.5245 17.1514 19.5301 17.1523 19.5251Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                                <a href="" class="header-top__icon-item">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19.077 5.428C17.191 3.541 14.683 2.501 12.011 2.5C6.505 2.5 2.024 6.979 2.022 12.485C2.021 14.245 2.481 15.963 3.355 17.477L2 22.5L7.233 21.263C8.692 22.059 10.334 22.478 12.006 22.479H12.01C17.515 22.479 21.996 17.999 21.999 12.494C22.001 9.825 20.963 7.316 19.077 5.428ZM16.898 16.054C16.69 16.637 15.671 17.199 15.213 17.24C14.755 17.282 14.326 17.447 12.218 16.616C9.681 15.616 8.079 13.015 7.955 12.849C7.83 12.682 6.936 11.496 6.936 10.268C6.936 9.04 7.581 8.436 7.81 8.187C8.039 7.937 8.309 7.875 8.476 7.875C8.642 7.875 8.809 7.875 8.954 7.881C9.132 7.888 9.329 7.897 9.516 8.312C9.738 8.806 10.223 10.04 10.285 10.165C10.347 10.29 10.389 10.436 10.306 10.602C10.223 10.768 10.181 10.872 10.057 11.018C9.932 11.164 9.795 11.343 9.683 11.455C9.558 11.579 9.428 11.715 9.573 11.964C9.719 12.214 10.219 13.031 10.961 13.692C11.915 14.542 12.718 14.805 12.968 14.931C13.218 15.056 13.363 15.035 13.509 14.868C13.655 14.702 14.133 14.14 14.299 13.89C14.465 13.64 14.632 13.682 14.861 13.765C15.09 13.848 16.317 14.452 16.566 14.577C16.816 14.702 16.982 14.764 17.044 14.868C17.106 14.971 17.106 15.471 16.898 16.054Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                                <a href="tel:+74991130621" class="header-top__icon-item">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_7_10)">
+                                            <path
+                                                d="M6.62 11.29C8.06 14.12 10.38 16.43 13.21 17.88L15.41 15.68C15.68 15.41 16.08 15.32 16.43 15.44C17.55 15.81 18.76 16.01 20 16.01C20.55 16.01 21 16.46 21 17.01V20.5C21 21.05 20.55 21.5 20 21.5C10.61 21.5 3 13.89 3 4.5C3 3.95 3.45 3.5 4 3.5H7.5C8.05 3.5 8.5 3.95 8.5 4.5C8.5 5.75 8.7 6.95 9.07 8.07C9.18 8.42 9.1 8.81 8.82 9.09L6.62 11.29Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_7_10">
+                                                <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="header-top__phone">
+                                        +7 499 113-06-21
+                                    </span>
+                                    
+                                    <div class="header-top__time">
+                                        Пн-Пт 8:00-18:00
+                                    </div>
+                                </a>
+                                <div class="header-top__icon header-top__menu-link">
+                                    <span></span>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__bottom header-bottom">
+        <div class="header-bottom__container container">
+            <div class="header-bottom__body">
+                <nav class="header-bottom__nav">
+                    <ul class="header-bottom__list">
+                        <li>
+                            <a href="" class="header-bottom__link link">
+                                Компания
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="header-bottom__link link">
+                                Услуги
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="header-bottom__link link">
+                                Отзывы
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="header-bottom__link link">
+                                Выполненные работы
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="header-bottom__link link">
+                                Лицензии
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="header-bottom__link link">
+                                Партнерам
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="header-bottom__link link">
+                                Блог
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="header-bottom__link link">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+        <main class="main">
+            <section class="intro">
+    <div class="intro__container container">
+        <div class="intro__body">
+            <div class="intro__content">
+                <div class="intro__item">
+                    <h1 class="intro__heading heading">
+                        Профессиональная команда <br>
+                        <span class="heading__main">ЭНЕРГЕТИКОВ</span>
+                    </h1>
+                </div>
+                <div class="intro__item">
+                    <h2 class="intro__label label">
+                        со стажем более <span>12 лет</span>
+                    </h2>
+                </div>
+                <div class="intro__item">
+                    <div class="intro__text text">
+                        <p>
+                            Выполним любые электромонтажные работы <br> качественно, по договору и в установленный срок
+                        </p>
+                    </div>
+                </div>
+                <div class="intro__item">
+                    <a href="" class="intro__button button">
+                        Получить консультацию
+                    </a>
+                </div>
+            </div>
+            <div class="intro__row intro-row">
+
+                <div class="intro-row__row">
+                    <div class="intro-row__item">
+                        <div class="intro-row__top">
+                            <div class="intro-row__icon">
+                                <img src="img/icons/key.png" alt="">
+                            </div>
+                            <div class="intro-row__label">
+                                Работа «под ключ»
+                            </div>
+                        </div>
+                        <div class="intro-row__content">
+                            <div class="intro-row__text text">
+                                <p>
+                                    От оформления заявки до подачи напряжения, наши клиенты получают бесплатная
+                                    пожизненную техническую и юридическую поддержку
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro-row__item">
+                        <div class="intro-row__top">
+                            <div class="intro-row__icon">
+                                <img src="img/icons/shield.png" alt="">
+                            </div>
+                            <div class="intro-row__label">
+                                Безопасно и законно
+                            </div>
+                        </div>
+                        <div class="intro-row__content">
+                            <div class="intro-row__text text">
+                                <p>
+                                    Соблюдаем технику безопасности и регламенты ГОСТов, СНИПов и ПУЭ
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro-row__item">
+                        <div class="intro-row__top">
+                            <div class="intro-row__icon">
+                                <img src="img/icons/docs.png" alt="">
+                            </div>
+                            <div class="intro-row__label">
+                                Надежно и прозрачно
+                            </div>
+                        </div>
+                        <div class="intro-row__content">
+                            <div class="intro-row__text text">
+                                <p>
+                                    Работаем по договору с фиксированием цены, которая не изменится в процессе работы
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro-row__item">
+                        <div class="intro-row__top">
+                            <div class="intro-row__icon">
+                                <img src="img/icons/team.png" alt="">
+                            </div>
+                            <div class="intro-row__label">
+                                Опытная команда
+                            </div>
+                        </div>
+                        <div class="intro-row__content">
+                            <div class="intro-row__text text">
+                                <p>
+                                    Все мастера выходцы из электросетевых компаний, с техническим образованием и опытом
+                                    работы более 10 лет
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</section>
+            <section class="services">
+
+    <div class="services__body">
+        <div class="services__top">
+            <h3 class="services__label text text-label">
+                Наши услуги
+            </h3>
+            <h2 class="services__title title">
+                Что нужно сделать?
+            </h2>
+        </div>
+        <div class="services__content">
+            <div class="services__row">
+                <a href="" class="services__item">
+                    <div class="services__sublabel">
+                        Увеличить <br>
+                        мощность
+                    </div>
+                    <div class="services__image" style="background-image: url(../img/services/01.jpg);">
+                        <div class="services__mask">   
+                            <!-- Технический класс -->
+                        </div>
+                        <!-- <img src="img/services/01.jpg" alt=""> -->
+                    </div>
+                </a>
+                <a href="" class="services__item">
+
+                    <div class="services__sublabel">
+                        Подключить <br>
+                        электричество
+                    </div>
+                    <div class="services__image "  style="background-image: url(../img/services/02.jpg);">
+                        <div class="services__mask">   
+                            <!-- Технический класс -->
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="services__item">
+
+                    <div class="services__sublabel">
+                        Переоформить <br>
+                        мощность
+                    </div>
+                    <div class="services__image"  style="background-image: url(../img/services/03.jpg);">
+                        <div class="services__mask">   
+                            <!-- Технический класс -->
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="services__item">
+
+                    <div class="services__sublabel">
+                        Электромонтажные <br>
+                        работы
+                    </div>
+                    <div class="services__image"  style="background-image: url(../img/services/04.jpg);">
+                        <div class="services__mask">   
+                            <!-- Технический класс -->
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="services__item">
+
+                    <div class="services__sublabel">
+                        Проектирование
+                    </div>
+                    <div class="services__image"  style="background-image: url(../img/services/05.jpg);">
+                        <div class="services__mask">   
+                            <!-- Технический класс -->
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="services__item">
+
+                    <div class="services__sublabel">
+                        Консалтинг
+                    </div>
+                    <div class="services__image"  style="background-image: url(../img/services/06.jpg);">
+                        <div class="services__mask">   
+                            <!-- Технический класс -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>
+            <section class="object-type">
+    <div class="object-type__body">
+        <div class="object-type__content">
+            <div class="object-type__container container">
+                <div class="object-type__top section-to">
+                    <div class="object-type__item">
+                        <h3 class="object-type__label text text-label">
+                            Виды объектов
+                        </h3>
+                    </div>
+                    <div class="object-type__item">
+                        <h2 class="object-type__title title">
+                            С чем работаем...
+                        </h2>
+                    </div>
+                </div>
+                <div class="object-type__items">
+                    <div class="object-type__row">
+                        <div class="object-type__item">
+                            <div class="object-type__icon icon-image">
+                                <img src="img/object-type/garage.png" alt="">
+                            </div>
+                            <div class="object-type__sublabel">
+                                Нежилые помещения
+                            </div>
+                            
+                        </div>
+                        <div class="object-type__item">
+                            <div class="object-type__icon icon-image">
+                                <img src="img/object-type/pc.png" alt="">
+                            </div>
+                            <div class="object-type__sublabel">
+                                Квартиры
+                            </div>
+                            
+                        </div>
+                        <div class="object-type__item">
+                            <div class="object-type__icon icon-image">
+                                <img src="img/object-type/garden.png" alt="">
+                            </div>
+                            <div class="object-type__sublabel">
+                                Земельные участки
+                            </div>
+                            
+                        </div>
+                        <div class="object-type__item">
+                            <div class="object-type__icon icon-image">
+                                <img src="img/object-type/house.png" alt="">
+                            </div>  
+                            <div class="object-type__sublabel">
+                                Отдельно стоящие здания
+                            </div>
+                            
+                        </div>
+                        <div class="object-type__item">
+                            <div class="object-type__icon icon-image">
+                                <img src="img/object-type/rest.png" alt="">
+                            </div>
+                            <div class="object-type__sublabel">
+                                Рестораны, кафе
+                            </div>
+                            
+                        </div>
+                        <div class="object-type__item">
+                            <div class="object-type__icon icon-image">
+                                <img src="img/object-type/flower-shop.png" alt="">
+                            </div>
+                            <div class="object-type__sublabel">
+                                Магазины, гипермаркеты
+                            </div>
+                            
+                        </div>
+                        <div class="object-type__item">
+                            <div class="object-type__icon icon-image">
+                                <img src="img/object-type/object.png" alt="">
+                            </div>
+                            <div class="object-type__sublabel">
+                                Объекты строительства
+                            </div>
+                            
+                        </div>
+                        <div class="object-type__item">
+                            <div class="object-type__icon icon-image">
+                                <img src="img/object-type/city.png" alt="">
+                            </div>
+                            <div class="object-type__sublabel">
+                                Комплекс зданий
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="object-type__image">
+            <img src="img/object-type/team.png" alt="team">
+        </div>
+    </div>
+</section>
+            <section class="about-section">
+    <div class="about-section__container container">
+        <div class="about-section__body">
+            <div class="about-section__top section-top">
+                <h3 class="about-section__label text text-label">
+                    О компании
+                </h3>
+                <h2 class="about-section__title title">
+                    Поручите задачи профессионалам
+                </h2>
+
+            </div>
+            <div class="about-section__content">
+                <div class="about-section__item">
+                    <div class="about-section__text sub-text">
+                        <p>
+                            В нашей компании мы обходимся без посредников, выполняя и контролируя весь комплекс работ от начала до конца. Имея в штате юридических и технических специалистов, собственный цех и бригаду монтажников, мы можем влиять на сроки и стоимость работ электросетей, на решение по согласованию от УК и успешно сдавать объект инспектору.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-section__item">
+                    <div class="about-section__row">
+                        <div class="about-section__point">
+                            <div class="about-section__number number">
+                                12
+                            </div>
+                            <div class="about-section__sublabel sublabel">
+                                Опыт более 12 лет
+                            </div>
+                        </div>
+                        <div class="about-section__point">
+                            <div class="about-section__number number">
+                                125
+                            </div>
+                            <div class="about-section__sublabel sublabel">
+                                Реализованных объектов
+                            </div>
+                        </div>
+                        <div class="about-section__point">
+                            <div class="about-section__number number">
+                                513
+                            </div>
+                            <div class="about-section__sublabel sublabel">
+                                Согласованных документов
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-section__item about-section__item_center">
+                    <a href="#" class="about-section__button sub-button">
+                        Подробнее о компании
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="about-section__panel container icon-panel">
+        <div class="icon-panel__row">
+            <div class="icon-panel__item">
+                <div class="icon-panel__icon icon-image">
+                    <img src="img/icon-panel/location.png" alt="">
+                </div>
+                <div class="icon-panel__title text">
+                    <p>
+                        Офис в центре Москвы
+                    </p>
+                </div>
+            </div>
+            <div class="icon-panel__item">
+                <div class="icon-panel__icon icon-image">
+                    <img src="img/icon-panel/team-production.png" alt="">
+                </div>
+                <div class="icon-panel__title text">
+                    <p>
+                        Своя бригада монтажников
+                    </p>
+                </div>
+            </div>
+            <div class="icon-panel__item">
+                <div class="icon-panel__icon icon-image">
+                    <img src="img/icon-panel/electricity.png" alt="">
+                </div>
+                <div class="icon-panel__title text">
+                    <p>
+                        Сотрудники выходцы из электросетевых компаний
+                    </p>
+                </div>
+            </div>
+            <div class="icon-panel__item">
+                <div class="icon-panel__icon icon-image">
+                    <img src="img/icon-panel/team-star.png" alt="">
+                </div>
+                <div class="icon-panel__title text">
+                    <p>
+                        В команде — и юристы, и технические специалисты
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="partners">
+    <div class="partners__container container">
+        <div class="partners__body">
+            <div class="partners__top section-top">
+                <h3 class="partners__label text text-label">
+                    Партнеры и клиенты
+                </h3>
+                <h2 class="partners__title title">
+                    Нам доверяют
+                </h2>
+            </div>
+            <div class="partners__content">
+                <div class="partners__row">
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/01.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/02.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/03.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/04.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/05.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/06.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/07.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/08.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/09.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/10.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/11.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/12.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/13.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/14.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/15.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/16.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/17.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__image">
+                            <img src="img/parthers/18.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="questions">
+    <div class="questions__container container">
+        <div class="questions__body">
+            <div class="questions__row">
+                <div class="questions__row-item">
+                    <div class="questions__top section-top">
+                        <h3 class="questions__label text text-label">
+                            Вопрос-ответ
+                        </h3>
+                        <h2 class="questions__title title">
+                            Популярные <br>
+                            вопросы
+                        </h2>
+                    </div>
+                </div>
+                <div class="questions__row-item">
+                    <div class="questions__net" data-spollers>
+                        <div class="questions__item questions-item" >
+                            <button data-spoller class="questions-item__button">
+                                Наименование вопроса Значимость этих проблем настолько очевидна, что укрепление и развитие 
+                            </button>
+                            <div class="questions-item__content">
+                                <div class="questions-item__text text">
+                                    <p>
+                                        Значимость этих проблем настолько очевидна, что укрепление и развитие структуры позволяет выполнять важные задания по разработке модели развития. Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельностий
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questions__item questions-item" >
+                            <button data-spoller class="questions-item__button">
+                                Наименование вопроса Значимость этих проблем настолько очевидна, что укрепление и развитие 
+                            </button>
+                            <div class="questions-item__content">
+                                <div class="questions-item__text text">
+                                    <p>
+                                        Значимость этих проблем настолько очевидна, что укрепление и развитие структуры позволяет выполнять важные задания по разработке модели развития. Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельностий
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questions__item questions-item" >
+                            <button data-spoller class="questions-item__button">
+                                Наименование вопроса Значимость этих проблем настолько очевидна, что укрепление и развитие 
+                            </button>
+                            <div class="questions-item__content">
+                                <div class="questions-item__text text">
+                                    <p>
+                                        Значимость этих проблем настолько очевидна, что укрепление и развитие структуры позволяет выполнять важные задания по разработке модели развития. Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельностий
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questions__item questions-item" >
+                            <button data-spoller class="questions-item__button">
+                                Наименование вопроса Значимость этих проблем настолько очевидна, что укрепление и развитие 
+                            </button>
+                            <div class="questions-item__content">
+                                <div class="questions-item__text text">
+                                    <p>
+                                        Значимость этих проблем настолько очевидна, что укрепление и развитие структуры позволяет выполнять важные задания по разработке модели развития. Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельностий
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questions__item questions-item" >
+                            <button data-spoller class="questions-item__button">
+                                Наименование вопроса Значимость этих проблем настолько очевидна, что укрепление и развитие 
+                            </button>
+                            <div class="questions-item__content">
+                                <div class="questions-item__text text">
+                                    <p>
+                                        Значимость этих проблем настолько очевидна, что укрепление и развитие структуры позволяет выполнять важные задания по разработке модели развития. Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельностий
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="questions__row-item">
+                    <div class="questions__buttons">
+                        <a href="" class="questions__button button button_default">
+                            Задать вопрос
+                        </a>
+                        <a href="" class="questions__button sub-button ">
+                            Все вопросы
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="questions__columns">
+                <div class="questions__column">
+                    
+                    
+                </div>
+                <div class="questions__column ">
+                    
+                    
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+            <section class="feedback">
+    <div class="feedback__container container">
+        <div class="feedback__body">
+            <div class="feedback__columns">
+                <div class="feedback__column">
+                    <div class="feedback__item">
+                        <h2 class="feedback__title title">
+                            Давайте обсудим ваш объект
+                        </h2>
+                    </div>
+                    <div class="feedback__item">
+                        <div class="feedback__label">
+                            Просто позвоните по номеру <br> <a href="tel:+74991124137" class="feedback__link">+7 (499) 112 41 37</a>
+                             или заполните форму обратной связи:
+                        </div>
+                    </div>
+                    <div class="feedback__item">
+                        <form action="#" class="feedback__form form">
+                            <div class="form__item">
+                                <input type="text" class="form__input">
+                                <label for="" class="form__label">ФИО</label>
+                            </div>
+                            <div class="form__item">
+                                
+                                <input type="tel" class="form__input tel _req">
+                                <label for="" class="form__label">Телефон</label>
+                            </div>
+                            <div class="form__item">
+                                <button class="form__button button">
+                                    Отправить
+                                </button>
+                            </div>
+                            <div class="form__item">
+                                <div class="form__checkbox">
+                                    Согласен с обработкой моих персональных данных в соответствии с политикой конфиденциальности
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="feedback__column">
+                    <div class="feedback__row">
+                        <div class="feedback__point feedback-item">
+                            <div class="feedback-item__left">
+                                <div class="feedback-item__icon">
+                                    <img src="img/feedback/google-docs.png" alt="">
+                                </div>
+                            </div>
+                            <div class="feedback-item__right">
+                                <div class="feedback-item__title">
+                                    Работаем по договору
+                                </div>
+                                <div class="feedback-item__text">
+                                    <p>
+                                        Заключаем договор с указанием сроков. Все неучтенные работы выполним за свой счет. ОГРН: 1197746410355
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback__point feedback-item">
+                            <div class="feedback-item__left">
+                                <div class="feedback-item__icon">
+                                    <img src="img/feedback/wallet.png" alt="">
+                                </div>
+                            </div>
+                            <div class="feedback-item__right">
+                                <div class="feedback-item__title">
+                                    Любая форма оплаты
+                                </div>
+                                <div class="feedback-item__text">
+                                    <p>
+                                        ЗПринимаем оплату на расчетный счет, платим НДС.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback__point feedback-item">
+                            <div class="feedback-item__left">
+                                <div class="feedback-item__icon">
+                                    <img src="img/feedback/delivery.png" alt="">
+                                </div>
+                            </div>
+                            <div class="feedback-item__right">
+                                <div class="feedback-item__title">
+                                    Документы привозит курьер
+                                </div>
+                                <div class="feedback-item__text">
+                                    <p>
+                                        Вам не нужно тратить время на очереди в электросетях или в пробке в офис к подрядчику
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback__point feedback-item">
+                            <div class="feedback-item__left">
+                                <div class="feedback-item__icon">
+                                    <img src="img/feedback/man.png" alt="">
+                                </div>
+                            </div>
+                            <div class="feedback-item__right">
+                                <div class="feedback-item__title">
+                                    Пожизненная консультация
+                                </div>
+                                <div class="feedback-item__text">
+                                    <p>
+                                        Наши специалисты делятся своим экспертным мнением даже после окончания работ.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback__point feedback-item">
+                            <div class="feedback-item__left">
+                                <div class="feedback-item__icon">
+                                    <img src="img/feedback/map.png" alt="">
+                                </div>
+                            </div>
+                            <div class="feedback-item__right">
+                                <div class="feedback-item__title">
+                                    Офис в центре Москвы
+                                </div>
+                                <div class="feedback-item__text">
+                                    <p>
+                                        До офиса компании удобно добираться. Офис находится в центре Москвы: Метро кольцевая, площадь 3-х вокзалов
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback__point feedback-item">
+                            <div class="feedback-item__left">
+                                <div class="feedback-item__icon">
+                                    <img src="img/feedback/tool.png" alt="">
+                                </div>
+                            </div>
+                            <div class="feedback-item__right">
+                                <div class="feedback-item__title">
+                                    3 месяца техобслуживания
+                                </div>
+                                <div class="feedback-item__text">
+                                    <p>
+                                        Проверяем работу оборудования и безопасность эксплуатации после сдачи проекта
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        </main>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b231b81d-f535-4d7c-a0f6-75122791fd24&lang=ru_RU" type="text/javascript">
+    </script>
+</body>
+
+</html>

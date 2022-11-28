@@ -1,0 +1,135 @@
+.questions {
+    background: #EBF4FF;
+    @include adaptiv-value("padding-top", 120, 40, 1);
+    @include adaptiv-value("padding-bottom", 120, 40, 1);
+    &__container {}
+
+    &__body {}
+
+    &__columns {}
+
+    &__column {}
+
+    &__top {
+        text-align: left;
+        display: block;
+        @media(max-width:767px) {
+
+            display: flex;
+            text-align: center;
+        }
+    }
+
+    &__label {}
+
+    &__title {}
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    &__button {
+        font-size: 13px;
+        display: flex;
+        height: 48px;
+        flex: 0 1 calc(50% - 12px);
+        @media(max-width:1400px) {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: calc(40% - 25px) calc(60% - 25px);
+        grid-template-rows: repeat(3, auto);
+        gap: 50px;
+        
+        grid-template-areas:
+            "first main"
+            "last main"
+            "last main"
+        ;
+        @media(max-width:767px) {
+            grid-template-columns: 1fr;
+            align-items: center;
+            grid-template-areas: 
+                "first first"
+                "main main"
+                "last last"
+            ;
+        }
+        
+    }
+
+    &__net {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__row-item {
+        &:first-child {
+            grid-area: first;
+        }
+
+        &:nth-child(2) {
+            grid-area: main;
+        }
+
+        &:nth-child(3) {
+            grid-area: last;
+        }
+    }
+
+    &__item {}
+}
+
+.questions-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+
+    &__button {
+        font-weight: 700;
+        font-size: 16px;
+        display: flex;
+        gap: 16px;
+        text-align: left;
+        transition: all 0.4s ease 0s;
+        margin-bottom: 4px;
+        &:before {
+            transition: all 0.4s ease 0s;
+            content: "";
+            display: block;
+            background-image: url(../img/icons/sp-arrow.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 24px;
+            height: 24px;
+            flex: 0 0 24px;
+        }
+        &._active  {
+            &:before {
+                transform: rotate(-90deg);
+            }
+        }
+        @media(max-width:492px) {
+            font-size: 14px;
+        }
+    }
+
+    &__content {
+        padding-left: 40px;
+        margin-top: 12px;
+    }
+
+    &__text {
+        line-height: 125%;
+        @media(max-width:492px) {
+            font-size: 12px;
+        }
+    }
+}

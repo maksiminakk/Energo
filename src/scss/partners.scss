@@ -1,0 +1,55 @@
+.partners {
+    @include adaptiv-value("padding-top", 120, 40, 1);
+    @include adaptiv-value("padding-bottom", 120, 30, 1);
+
+    &__container {}
+
+    &__body {}
+
+    &__top {
+        @include adaptiv-value("margin-bottom", 70, 24, 1);
+    }
+
+    &__label {}
+
+    &__title {}
+
+    &__content {}
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(168px, 96px));
+        gap: 24px;
+        justify-content: center;
+        @media(max-width:492px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        @include adaptiv-value("height", 168, 96, 1);
+        position: relative;
+        background: #fff;
+        border: 2px solid rgba(0, 0, 0, 0.04);
+        border-radius: 16px;
+        @media(max-width:492px) {
+            border: none;
+
+        }
+    }
+
+    &__image {
+
+        img {
+
+            @include adaptiv-value("max-height", 120, 70, 1);
+            max-width: 140px;
+            object-fit: cover;
+
+        }
+    }
+}

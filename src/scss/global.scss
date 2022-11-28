@@ -21,10 +21,24 @@ $subFF: 'Nunito';
 $black: #100F00;
 $yellow: #FCE300;
 $hoverYellow: #FFED4D;
+$blue: #004788;
+$blue2: #007BFC;
+$blue3: #1B89FC;
+$opacityBlue: rgba(0, 123, 252, 0.08);
+
 
 body {
     font-family: 'NunitoSans';
     font-weight: 400;
+}
+
+.icon-image {
+    img, svg {
+        object-fit: cover;
+        @include adaptiv-value("width", 64, 32, 1);
+        @include adaptiv-value("height", 64, 32, 1);
+        flex: 0 0 calc(32px + 32 * ((100vw - 360px) / 950));
+    }
 }
 
 .heading {
@@ -42,11 +56,36 @@ body {
     }
 }
 
+.title {
+    @include adaptiv-value("font-size", 48, 32, 1);
+    line-height: 110%;
+    font-weight: 900;
+}
+
 .label {}
+.sublabel {
+    @include adaptiv-value("font-size", 24,16 , 1);
+    line-height: 120%;
+}
 
 .text {
     font-size: 14px;
     font-weight: 400;
+    line-height: 120%;
+}
+
+.text-label {
+    @include adaptiv-value("font-size", 14, 10, 1);
+    letter-spacing: 3px;
+    line-height: 102%;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: $subFF;
+}
+
+.number {
+    @include adaptiv-value("font-size", 64, 40, 1);
+    font-weight: 900;
     line-height: 120%;
 }
 
@@ -82,4 +121,37 @@ body {
     &:hover {
         background-color: $hoverYellow;
     }
+    &_default {
+        color: $blue;
+        &:before {
+            display: none;
+            
+        }
+    }
+}
+
+.section-top {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.sub-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 34px;
+    background: $opacityBlue;
+    border-radius: 8px;
+    color: $blue2;
+    font-size: 13px;
+    line-height: 185%;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }

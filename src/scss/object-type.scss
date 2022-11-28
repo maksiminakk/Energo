@@ -1,0 +1,103 @@
+.object-type {
+    
+    @include adaptiv-value("padding-top", 120, 40, 1);
+    &__body {   
+    }
+
+    &__content {
+    }
+
+    &__container {
+    }
+
+    &__top {
+        @include adaptiv-value("margin-bottom",70 , 25, 1);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        @media(max-width:492px) {
+            flex-direction: row;
+        }
+        
+    }
+
+    &__label {
+        color: $blue;
+    }
+
+    &__title {
+    }
+
+    &__items {
+        // @include adaptiv-value("margin-bottom", 120, 50, 1);
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px 30px;
+        @media(max-width:767px) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+
+        }
+        @media(max-width:492px) {
+            grid-template-columns: repeat(1, 1fr);
+            align-items: start;
+        }
+
+    }
+
+    &__icon {
+        
+    }
+
+    &__sublabel {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    &__image {
+        margin: 0 auto;
+        max-width: 1580px;
+        width: 100%;
+        position: relative;
+        padding-bottom: 30%;
+        z-index: 1;
+        bottom: -200px;
+        @media(max-width:1600px) {
+            max-width: 1200px;
+        }
+        @media(max-width:1300px) {
+            max-width: 992px;
+        }
+        @media(max-width:1100px) {
+            max-width: 767px;
+            bottom: -150px;
+        }
+        @media(max-width:900px) {
+            bottom: -90px;
+        }
+        @media(max-width:492px) {
+            max-width: 400px;
+            bottom: -50px;
+        }
+        img {
+            display: flex;
+            align-items: start;
+            object-fit: contain;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 0px 15px;
+            transition: all 0.4s ease 0s;
+            
+        }
+    }
+}
+
