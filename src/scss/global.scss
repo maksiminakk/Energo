@@ -25,11 +25,29 @@ $blue: #004788;
 $blue2: #007BFC;
 $blue3: #1B89FC;
 $opacityBlue: rgba(0, 123, 252, 0.08);
+$red: #FC1B1B;
 
 
 body {
     font-family: 'NunitoSans';
     font-weight: 400;
+}
+
+.ibg {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+}
+
+.section {
+    @include adaptiv-value("padding-top", 120, 40, 1);
+    @include adaptiv-value("padding-bottom", 120, 40, 1);
+    &._has-transform-item {
+        padding-bottom: 244px;
+    }
 }
 
 .icon-image {

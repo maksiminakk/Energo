@@ -1,0 +1,150 @@
+.reviews {
+    background: #EBF4FF;
+    mix-blend-mode: multiply;
+    padding: 250px 0px 120px 0px;
+    // @media(max-width:492px) {}
+    &__container {}
+
+    &__body {}
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        @include adaptiv-value("margin-bottom", 55, 20, 1);
+        gap: 20px;
+        @media(max-width:700px) {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: start;
+        }
+    }
+
+    &__left {}
+
+    &__label {
+        font-size: 14px;
+        color: $blue;
+        margin-bottom: 16px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        @media(max-width:492px) {
+            font-size: 10px;
+        }
+
+    }
+
+    &__title {}
+
+    &__right {
+        align-self: flex-end;
+        @media(max-width:700px) {
+            align-self: center;
+            width: 100%;
+        }
+    }
+
+    &__button {
+        @media(max-width:492px) {
+            display: flex;
+            width: 100%;
+        }
+    }
+
+    &__content {}
+
+    &__row {
+        padding: 40px 0px;
+        
+    }
+
+    &__wrapper {
+        @media(max-width:1024px) {
+            flex-direction: column;
+            gap: 45px;
+        }
+    }
+
+    &__slide {}
+
+    &__item {}
+}
+
+.reviews-item {
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 50px 24px 24px 24px;
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    &__label {
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        margin-bottom: 16px;
+
+        p {
+            margin-bottom: 4px;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        color: #007BFC;
+        border-bottom: 1px solid #007BFC;
+    }
+
+    &__main-link {
+        font-size: 16px;
+        font-weight: 700;
+        display: inline-flex;
+        color: #007BFC;
+        margin-bottom: 16px;
+        gap: 4px;
+        &:after {
+            content: "";
+            display: block;
+            width: 16px;
+            height: 16px;
+            flex: 0 0 16px;
+            background-image: url(../img/icons/eye-blue.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    &__date {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        opacity: 0.4;
+    }
+
+    &__logo {
+        position: absolute;
+        height: 72px;
+        top: -34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 24px;
+        border-radius: 400px;
+        background: #FFFFFF;
+        padding: 0px 20px;
+        border: 2px solid #EBF4FF;
+
+        img {
+            object-fit: cover;
+            max-width: 100%;
+        }
+    }
+}
