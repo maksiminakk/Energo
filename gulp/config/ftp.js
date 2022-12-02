@@ -1,6 +1,6 @@
 export let configFTP = {
-    host: "maksipn1.beget.tech",
-    user: "maksipn1_admin",
-    password: "Linochka53912!",
+    host: "beweb.beget.tech",
+    user: "beweb_energo",
+    password: "gn8DP&ua",
     parallel: 5
 }

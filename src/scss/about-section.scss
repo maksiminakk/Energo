@@ -4,6 +4,7 @@
 
     &__container {
         position: relative;
+        z-index: 15;
     }
 
     &__body {}
@@ -89,6 +90,7 @@
 .icon-panel {
     position: relative;
     transform: translate(0, 50%);
+    z-index: 12;
     @media(max-width:1024px) {
         transform: translate(0);
         background-color: #fff;

@@ -19,9 +19,27 @@
             display: block;
         }
         @media(max-width:492px) {
+            
             padding-top: calc(62px + 65px);
         }
 
+    }
+    @media(max-width:1300px) {
+        padding: 0px 0px 150px 0px;
+        background-position: right center;
+        
+    }
+    @media(max-width:1024px) {
+        padding: 0 0 90px 0px;
+    }
+    @media(max-width:492px) {
+        background-size: 492px;
+        background-color:  #002241;
+        background-position: top center;
+        
+    }
+    @media(max-width:360px) {
+        padding: 0px 0px 100px 0px;
     }
 
     &__body {}
@@ -55,7 +73,9 @@
         color: #fff;
         letter-spacing: 1px;
         line-height: 100%;
+        font-family: "Nunito";
         margin-bottom: 40px;
+        text-transform: none;
         @media(max-width:492px) {
             text-align: center;
         }

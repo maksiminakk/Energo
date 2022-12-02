@@ -1,0 +1,215 @@
+.footer {
+    color: #fff;
+    background-color: #000;
+    @include adaptiv-value("padding-top", 70, 40, 1);
+
+    a {
+        color: #fff;
+    }
+
+    &__container {}
+
+    &__body {}
+
+    &__columns {
+        display: flex;
+        gap: 120px;
+        justify-content: space-between;
+        @include adaptiv-value("padding-bottom", 75, 40, 1);
+        border-bottom: 1px solid rgba(196, 196, 196, 0.24);
+        @media(max-width:1024px) {
+            gap: 50px;
+        }
+        @media(max-width:767px) {
+            flex-direction: column;
+            border: none;
+        }
+    }
+
+    &__column {
+        &:first-child {
+            flex: 0 1 37.17%;
+        }
+
+        &:last-child {
+            flex: 0 1 63.83%;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    &__item {}
+
+    &__logo {}
+
+    &__label {
+        opacity: 0.64;
+        line-height: 170%;
+        margin-bottom: 3px;
+    }
+
+    &__link {
+        padding-bottom: 2px;
+        border-bottom: 1px dashed #FFFFFF;
+        
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 133%;
+        @media(max-width:767px) {
+            font-size: 16px;
+        }
+    }
+
+    &__row {}
+
+    &__bottom {}
+
+    &__copy {}
+}
+
+.footer-row {
+    display: flex;
+    gap: 50px;
+    @media(max-width:1024px) {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+    @media(max-width:767px) {
+        display: block;
+    }
+    &__column {
+        flex: auto;
+        @media(max-width:1024px) {
+            &:first-child {
+                flex: 1 1 100%;
+            }
+            &:nth-child(2) {
+                flex: 0 1 calc(50% - 12.5px);
+            }
+            &:nth-child(3) {
+                flex: 0 1 calc(50% - 12.5px);
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        li {
+            @media(max-width:767px) {
+                border-bottom: 1px solid rgba(196, 196, 196, 0.24);
+                &:first-child {
+                    border-top: 1px solid rgba(196, 196, 196, 0.24);
+                }
+                padding: 8px 0px;
+            }
+        }
+    }
+
+    &__link {
+        font-family: "Nunito";
+        font-size: 15px;
+        line-height: 160%;
+        font-style: normal;
+        font-weight: 500;
+        transition: all 0.4s ease 0s;
+
+        &:hover {
+            opacity: 0.4;
+        }
+    }
+}
+
+.footer-bottom {
+    padding: 14px 0px;
+    border-bottom: 1px solid rgba(196, 196, 196, 0.24);
+    &__columns {
+        display: flex;
+        align-items: center;
+        gap: 65px;
+        @media(max-width:1024px) {
+            gap: 25px;
+        }
+        @media(max-width:767px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__column {
+        flex: auto;
+        @media(max-width:767px) {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    &__left {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__sub-logo {
+        background: #fff;
+        border-radius: 8px;
+        padding: 10px;
+        flex: 0 1 123px;
+        width: 123px;
+        height: 65px;
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    &__text {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    &__right {
+        .footer-bottom__text {
+            white-space: nowrap;
+            line-height: 240%;
+            @media(max-width:1024px) {
+                white-space: inherit;
+            }
+        }
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        @media(max-width:1024px) {
+            
+        }
+    }
+
+    &__icon {}
+}
+
+.footer-copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 11px 0px;
+    &__label {
+        line-height: 240%;
+    }
+
+    &__logo {}
+}

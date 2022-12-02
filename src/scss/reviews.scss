@@ -2,7 +2,11 @@
     background: #EBF4FF;
     mix-blend-mode: multiply;
     padding: 250px 0px 120px 0px;
-    // @media(max-width:492px) {}
+
+    @media(max-width:767px) {
+        padding: 40px 0px 50px;
+    }
+
     &__container {}
 
     &__body {}
@@ -12,7 +16,8 @@
         justify-content: space-between;
         @include adaptiv-value("margin-bottom", 55, 20, 1);
         gap: 20px;
-        @media(max-width:700px) {
+
+        @media(max-width:767px) {
             flex-direction: column;
             text-align: center;
             align-items: center;
@@ -25,11 +30,14 @@
     &__label {
         font-size: 14px;
         color: $blue;
+
         margin-bottom: 16px;
         font-weight: 700;
         letter-spacing: 3px;
+
         @media(max-width:492px) {
             font-size: 10px;
+            margin-bottom: 10px;
         }
 
     }
@@ -38,24 +46,22 @@
 
     &__right {
         align-self: flex-end;
-        @media(max-width:700px) {
+
+        @media(max-width:767px) {
             align-self: center;
             width: 100%;
         }
     }
 
     &__button {
-        @media(max-width:492px) {
-            display: flex;
-            width: 100%;
-        }
+        
     }
 
     &__content {}
 
     &__row {
         padding: 40px 0px;
-        
+
     }
 
     &__wrapper {
@@ -76,20 +82,37 @@
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
     padding: 50px 24px 24px 24px;
-
+    @media(max-width:492px) {
+        padding: 30px 16px 16px 16px;
+    }
     &__title {
         font-size: 18px;
         font-weight: 700;
         margin-bottom: 8px;
+        @media(max-width:492px) {
+            font-size: 14px;
+        }
     }
 
     &__label {
         margin-bottom: 16px;
+        opacity: 0.64;
+        font-size: 16px;
+        line-height: 22px;
+        @media(max-width:492px) {
+            line-height: 16px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
     }
 
     &__text {
         margin-bottom: 16px;
-
+        @media(max-width:492px) {
+            font-size: 10px;
+            line-height: 14px;
+            margin-bottom: 8px;
+        }
         p {
             margin-bottom: 4px;
         }
@@ -99,6 +122,8 @@
         display: inline-block;
         color: #007BFC;
         border-bottom: 1px solid #007BFC;
+        
+        
     }
 
     &__main-link {
@@ -108,6 +133,7 @@
         color: #007BFC;
         margin-bottom: 16px;
         gap: 4px;
+
         &:after {
             content: "";
             display: block;
@@ -119,6 +145,10 @@
             background-position: center;
             background-size: cover;
         }
+        @media(max-width:492px) {
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
     }
 
     &__date {
@@ -127,6 +157,9 @@
         font-weight: 600;
         letter-spacing: 1px;
         opacity: 0.4;
+        @media(max-width:492px) {
+            font-size: 10px;
+        }
     }
 
     &__logo {
@@ -141,10 +174,27 @@
         background: #FFFFFF;
         padding: 0px 20px;
         border: 2px solid #EBF4FF;
+        @media(max-width:492px) {
+            height: 51px;
+            padding: 13px;
+            top: -25px;
+            left: 16px;
+        }
+        &._radius {
+            border-radius: 50%;
+            width: 72px;
+            height: 72px;
+            @media(max-width:492px) {
+                padding: 13px;
+                width: 51px;
+                height: 51px;
+            }
+        }
 
         img {
             object-fit: cover;
             max-width: 100%;
         }
+        
     }
 }

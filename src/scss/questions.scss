@@ -28,7 +28,13 @@
         display: flex;
         align-items: center;
         gap: 24px;
+        position: relative;
         flex-wrap: wrap;
+        top: -80px;
+        @media(max-width:767px) {
+            top: 0;
+            gap: 16px;
+        }
     }
 
     &__button {
@@ -53,6 +59,7 @@
             "last main"
         ;
         @media(max-width:767px) {
+            gap: 25px;
             grid-template-columns: 1fr;
             align-items: center;
             grid-template-areas: 
@@ -91,11 +98,14 @@
     background: #fff;
     border-radius: 8px;
     padding: 16px;
-
+    @media(max-width:492px) {
+        padding: 8px 8px 8px 16px;
+    }
     &__button {
         font-weight: 700;
         font-size: 16px;
         display: flex;
+        color: $black;
         gap: 16px;
         text-align: left;
         transition: all 0.4s ease 0s;

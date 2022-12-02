@@ -1,5 +1,12 @@
 "use strict";
 
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    document.body.classList.add('_touch');
+
+} else {
+    document.body.classList.add('_pc');
+};
+
 window.addEventListener("DOMContentLoaded", function () {
     function isWebp() {
 
@@ -215,105 +222,105 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    const popupLinks = document.querySelectorAll('.popup-link');
-    const body = document.querySelector('body');
-    const lockPadding = document.querySelectorAll(".lock-padding");
+    // const popupLinks = document.querySelectorAll('.popup-link');
+    // const body = document.querySelector('body');
+    // const lockPadding = document.querySelectorAll(".lock-padding");
 
-    let unlock = true;
+    // let unlock = true;
 
-    const timeout = 500;
+    // const timeout = 500;
 
-    if (popupLinks.length > 0) {
-        for (let index = 0; index < popupLinks.length; index++) {
-            const popupLink = popupLinks[index];
-            popupLink.addEventListener("click", function (e) {
-                const popupName = popupLink.getAttribute('href').replace('#', '');
-                const curentPopup = document.getElementById(popupName);
-                popupOpen(curentPopup);
-                e.preventDefault();
-            });
-        }
-    }
+    // if (popupLinks.length > 0) {
+    //     for (let index = 0; index < popupLinks.length; index++) {
+    //         const popupLink = popupLinks[index];
+    //         popupLink.addEventListener("click", function (e) {
+    //             const popupName = popupLink.getAttribute('href').replace('#', '');
+    //             const curentPopup = document.getElementById(popupName);
+    //             popupOpen(curentPopup);
+    //             e.preventDefault();
+    //         });
+    //     }
+    // }
 
-    const popupCloseIcon = document.querySelectorAll('.close-popup');
-    if (popupCloseIcon.length > 0) {
-        for (let index = 0; index < popupCloseIcon.length; index++) {
-            const el = popupCloseIcon[index];
-            el.addEventListener('click', function (e) {
-                popupClose(el.closest('.popup'));
-                e.preventDefault();
-            });
-        }
-    }
+    // const popupCloseIcon = document.querySelectorAll('.close-popup');
+    // if (popupCloseIcon.length > 0) {
+    //     for (let index = 0; index < popupCloseIcon.length; index++) {
+    //         const el = popupCloseIcon[index];
+    //         el.addEventListener('click', function (e) {
+    //             popupClose(el.closest('.popup'));
+    //             e.preventDefault();
+    //         });
+    //     }
+    // }
 
-    function popupOpen(curentPopup) {
-        if (curentPopup && unlock) {
-            const popupActive = document.querySelector('.popup.open');
-            if (popupActive) {
-                popupClose(popupActive, false);
-            } else {
-                bodyLock();
-            }
-            curentPopup.classList.add('open');
-            curentPopup.addEventListener("click", function (e) {
-                if (!e.target.closest('.popup__content')) {
-                    popupClose(e.target.closest('.popup'));
-                }
-            });
-        }
-    }
+    // function popupOpen(curentPopup) {
+    //     if (curentPopup && unlock) {
+    //         const popupActive = document.querySelector('.popup.open');
+    //         if (popupActive) {
+    //             popupClose(popupActive, false);
+    //         } else {
+    //             bodyLock();
+    //         }
+    //         curentPopup.classList.add('open');
+    //         curentPopup.addEventListener("click", function (e) {
+    //             if (!e.target.closest('.popup__content')) {
+    //                 popupClose(e.target.closest('.popup'));
+    //             }
+    //         });
+    //     }
+    // }
 
-    function popupClose(popupActive, doUnlock = true) {
-        if (unlock) {
-            popupActive.classList.remove('open');
-            if (doUnlock) {
-                bodyUnLock();
-            }
-        }
-    }
+    // function popupClose(popupActive, doUnlock = true) {
+    //     if (unlock) {
+    //         popupActive.classList.remove('open');
+    //         if (doUnlock) {
+    //             bodyUnLock();
+    //         }
+    //     }
+    // }
 
-    function bodyLock() {
-        const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+    // function bodyLock() {
+    //     const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
 
-        if (lockPadding.length > 0) {
-            for (let index = 0; index < lockPadding.length; index++) {
-                const el = lockPadding[index];
-                el.style.paddingRight = lockPaddingValue;
-            }
-        }
-        body.style.paddingRight = lockPaddingValue;
-        body.classList.add('_lock');
+    //     if (lockPadding.length > 0) {
+    //         for (let index = 0; index < lockPadding.length; index++) {
+    //             const el = lockPadding[index];
+    //             el.style.paddingRight = lockPaddingValue;
+    //         }
+    //     }
+    //     body.style.paddingRight = lockPaddingValue;
+    //     body.classList.add('_lock');
 
-        unlock = false;
-        setTimeout(function () {
-            unlock = true;
-        }, timeout);
-    }
+    //     unlock = false;
+    //     setTimeout(function () {
+    //         unlock = true;
+    //     }, timeout);
+    // }
 
-    function bodyUnLock() {
-        setTimeout(function () {
-            if (lockPadding.length > 0) {
-                for (let index = 0; index < lockPadding.length; index++) {
-                    const el = lockPadding[index];
-                    el.style.paddingRight = '0px';
-                }
-            }
-            body.style.paddingRight = '0px';
-            body.classList.remove('_lock');
-        }, timeout);
+    // function bodyUnLock() {
+    //     setTimeout(function () {
+    //         if (lockPadding.length > 0) {
+    //             for (let index = 0; index < lockPadding.length; index++) {
+    //                 const el = lockPadding[index];
+    //                 el.style.paddingRight = '0px';
+    //             }
+    //         }
+    //         body.style.paddingRight = '0px';
+    //         body.classList.remove('_lock');
+    //     }, timeout);
 
-        unlock = false;
-        setTimeout(function () {
-            unlock = true;
-        }, timeout);
-    }
+    //     unlock = false;
+    //     setTimeout(function () {
+    //         unlock = true;
+    //     }, timeout);
+    // }
 
-    document.addEventListener('keydown', function (e) {
-        if (e.which === 27) {
-            const popupActive = document.querySelector('.popup.open');
-            popupClose(popupActive);
-        }
-    });
+    // document.addEventListener('keydown', function (e) {
+    //     if (e.which === 27) {
+    //         const popupActive = document.querySelector('.popup.open');
+    //         popupClose(popupActive);
+    //     }
+    // });
     [].forEach.call(document.querySelectorAll('.tel'), function (input) {
         var keyCode;
 
@@ -480,7 +487,8 @@ window.addEventListener("DOMContentLoaded", function () {
                 zoom: 12,
                 // Обратите внимание, что в API 2.1 по умолчанию карта создается с элементами управления.
                 // Если вам не нужно их добавлять на карту, в ее параметрах передайте пустой массив в поле controls.
-                controls: []
+                controls: [],
+                
             });
 
             var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
@@ -497,17 +505,41 @@ window.addEventListener("DOMContentLoaded", function () {
                     '</div>'
                 ].join('')
             }, {
-                preset: 'islands#redDotIcon'
+                preset: '',
+                iconLayout: 'default#image',
+                iconImageHref: 'img/icons/map-icon.svg',
+                iconImageSize: [40, 52],
+                hideIconOnBalloonOpen: false,
+                balloonOffset: [85, 160],
+                hideIconOnBalloonOpen: false,
             });
 
             myMap.geoObjects.add(myPlacemark);
+            myMap.events.add('click', function () {
+                myPlacemark.options.set('iconImageHref','img/icons/map-icon.svg');
+            });
+            myPlacemark.events
+                // .add('mouseenter', function (e) {
+                //     // Ссылку на объект, вызвавший событие,
+                //     // можно получить из поля 'target'.
+                //     e.get('target').options.set('iconImageHref', 'img/icons/hover-map-icon.svg');
+                // })
+                // .add('mouseleave', function (e) {
+                //     e.get('target').options.set('iconImageHref','img/icons/map-icon.svg');
+                // })
+                .add('click', function(e) {
+                    e.get('target').options.set('iconImageHref','img/icons/hover-map-icon.svg');
+                });
+                
+
+
         });
 
     }
     setTimeout(() => {
         const mapWrapper = document.querySelector('.ymaps-2-1-79-inner-panes');
         mapWrapper.insertAdjacentHTML('beforeend', '<div class="map__mask" style="z-index: 1000;"> <!-- support --> </div>');
-    }, "1000");
+    }, "1500");
 
     const dropdwonItems = document.querySelectorAll('.dropdown__content');
     if (dropdwonItems.length > 0) {
@@ -553,14 +585,11 @@ window.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    
-
     // const reviewsWrapper = document.querySelector('.reviews__wrapper'),
     //     reviewsMobileSlider = document.querySelector('.reviews__row')
-    
+
     if (window.innerWidth > 1024) {
-        // reviewsWrapper.classList.remove('swiper-wrapper');
-        // reviewsMobileSlider.classList.remove('swiper');
+        document.querySelector('.sublist').classList.add('dropdown__list');
         const reviewsSlider = new Swiper('.reviews__row ', {
             sumulateTouch: false, //or false
             touchRatio: 1,
@@ -576,7 +605,7 @@ window.addEventListener("DOMContentLoaded", function () {
                 pageUpDown: true,
             },
             autoHeight: true,
-            slidesPerView: 3, 
+            slidesPerView: 3,
             watchoverflow: false,
             spaceBetween: 30,
             slidesPerGroup: 1,
@@ -611,8 +640,64 @@ window.addEventListener("DOMContentLoaded", function () {
             observeSlideChildren: true,
         });
     }
+    if (window.innerWidth < 767) {
+        const certificatesSlider = new Swiper('.certificates__row ', {
+            sumulateTouch: false,
+            touchRatio: 1,
+            touchAngel: 45,
+            grabCursor: true,
+            slideToClickedSlide: false,
+            hashNavigation: {
+                watchState: false,
+            },
+            keyboard: {
+                enabled: true,
+                onlyInViewport: true,
+                pageUpDown: true,
+            },
+            autoHeight: false,
+            slidesPerView: 3,
+            watchoverflow: false,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            centeredSlides: true,
+            slidesPerColumn: 1, // - для коректной работы не юзать авто высоту.
+            loop: false, // or false - не работает с мультирядностью
+            loopedSlides: 0, // работает с loop
+            freeMode: false,
+            //скорость переключения слайдов:
+            speed: 600,
+            effect: 'slide',
+            breakpoints: {
+                100: {
+                    spaceBetween: 10,
+                    slidesPerView: 'auto',
+                    centeredSlides: true
+                },
+                492: {
 
+                    spaceBetween: 20,
+                },
+                767: {
+                    spaceBetween: 24,
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            },
+            watchSlidesProgress: true,
+            watchSlidesVisibility: true,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+        });
+    }
 
+    if (window.innerWidth < 1400) {
+        const projectsContent = document.querySelector('.projects__content');
+        projectsContent.classList.add('container');
+    }
 
     const checboxes = document.querySelectorAll('.checkbox');
     checboxes.forEach(checkbox => {
@@ -620,6 +705,58 @@ window.addEventListener("DOMContentLoaded", function () {
             toggleActiveClass(checkbox);
         });
     });
+
+    const tabBtns = Array.from(document.querySelectorAll(".tab__btn"));
+    const tabSlide = Array.from(document.querySelectorAll(".tab__slide"));
+
+    const numBtns = tabBtns.length;
+
+    // root.style.setProperty("--num-btns", numBtns);
+
+    if (tabBtns.length > 0) {
+        tabBtns[0].classList.add("_active");
+        tabSlide[0].classList.add("_active");
+
+        let activeBtn = tabBtns[0];
+        let activeSlide = tabSlide[0];
+
+        tabBtns.forEach((el) => {
+            el.addEventListener("click", onTabBtnClick);
+        });
+
+        function onTabBtnClick(e) {
+            e.preventDefault();
+            const btn = e.target.closest(".tab__btn");
+            changeBtn(btn);
+        }
+
+        function changeBtn(btn) {
+            if (btn.classList.contains("_active")) {
+                return;
+            }
+            activeBtn.classList.remove("_active");
+            btn.classList.add("_active");
+            activeBtn = btn;
+            changeIndicator(btn);
+        }
+
+        function changeIndicator(btn) {
+            const indexBtn = tabBtns.indexOf(btn);
+            changeSlide(indexBtn);
+        }
+
+        function changeSlide(index) {
+            activeSlide.classList.remove("_active");
+            tabSlide[index].classList.add("_active");
+            activeSlide = tabSlide[index];
+        }
+    }
+
+    const projectsContent = this.document.querySelector('.projects__content');
+    const windowWidth = this.window.innerWidth;
+    if (windowWidth < 1920) {
+        projectsContent.style.left = `${windowWidth}`
+    }
 
     function formAddError(input) {
         input.parentElement.classList.add('_error');
@@ -633,6 +770,15 @@ window.addEventListener("DOMContentLoaded", function () {
 
     function numberTest(input) {
         return !/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(input.value);
+    }
+
+    const servicesItems = document.querySelectorAll('.services__item');
+    if (servicesItems.length > 0) {
+        servicesItems.forEach(servicesItem => {
+            servicesItem.addEventListener("click", function () {
+                toggleActiveClass(servicesItem);
+            });
+        });
     }
 
     function toggleActiveClass(el) {
