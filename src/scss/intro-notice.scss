@@ -1,0 +1,35 @@
+.intro-notice {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(12px);
+    border-radius: 8px;
+    @media(max-width:767px) {
+        padding: 14px;
+        gap: 16px;
+    }
+    &__icon {
+        img {
+            width: 64px;
+            height: 64px;
+            flex: 0 0 64px;
+            @media(max-width:1023px) {
+                width: 52px;
+                height: 52px;
+                flex: 0 0 52px;
+            }
+        }
+    }
+
+    &__label {
+        font-weight: 700;
+        @include adaptiv-value("font-size", 24, 16, 1);
+        color: #fff;
+        line-height: 133%;
+        @media(max-width:1023px) {
+            font-weight: 500;
+        }
+    }
+}

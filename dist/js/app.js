@@ -371,49 +371,51 @@ window.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    const form = document.getElementById('form');
+    // const form = document.getElementById('form');\
+    const forms = document.querySelectorAll('.form');
     const submitButton = document.getElementById('code-link');
-
-    if (form) {
-        form.addEventListener('submit', formSend);
-    }
-    async function formSend(e) {
-        e.preventDefault();
-        let error = formValidate(form);
-    }
-
-    function formValidate(form) {
-        let error = 0;
-        let formReq = document.querySelectorAll('._req');
-
-        for (let index = 0; index < formReq.length; index++) {
-            const input = formReq[index];
-            formRemoveError(input);
-            if (input.classList.contains('tel')) {
-                if (numberTest(input)) {
-                    formAddError(input);
-                    error++;
-                }
-            } else {
-                if (input.value === '') {
-                    formAddError(input);
-                    error++;
-                }
-            }
-            if (input.classList.contains('_name')) {
-                if (codeTest(input)) {
-                    formAddError(input);
-                    error++;
-                }
-            } else {
-                if (input.value >= 3) {
-                    formAddError(input);
-                    error++;
-                }
-            }
+    forms.forEach(form => {
+        if (form.length > 0) {
+            form.addEventListener('submit', formSend);
         }
-        return error;
-    }
+        async function formSend(e) {
+            e.preventDefault();
+            let error = formValidate(form);
+        }
+    
+        function formValidate(form) {
+            let error = 0;
+            let formReq = document.querySelectorAll('._req');
+    
+            for (let index = 0; index < formReq.length; index++) {
+                const input = formReq[index];
+                formRemoveError(input);
+                if (input.classList.contains('tel')) {
+                    if (numberTest(input)) {
+                        formAddError(input);
+                        error++;
+                    }
+                } else {
+                    if (input.value === '') {
+                        formAddError(input);
+                        error++;
+                    }
+                }
+                if (input.classList.contains('_name')) {
+                    if (codeTest(input)) {
+                        formAddError(input);
+                        error++;
+                    }
+                } else {
+                    if (input.value >= 3) {
+                        formAddError(input);
+                        error++;
+                    }
+                }
+            }
+            return error;
+        }
+    });
 
     const map = document.getElementById('map');
     if (map) {
@@ -538,7 +540,9 @@ window.addEventListener("DOMContentLoaded", function () {
     }
     setTimeout(() => {
         const mapWrapper = document.querySelector('.ymaps-2-1-79-inner-panes');
-        mapWrapper.insertAdjacentHTML('beforeend', '<div class="map__mask" style="z-index: 1000;"> <!-- support --> </div>');
+        if (mapWrapper) {
+            mapWrapper.insertAdjacentHTML('beforeend', '<div class="map__mask" style="z-index: 1000;"> <!-- support --> </div>');
+        }
     }, "1500");
 
     const dropdwonItems = document.querySelectorAll('.dropdown__content');
@@ -587,6 +591,70 @@ window.addEventListener("DOMContentLoaded", function () {
 
     // const reviewsWrapper = document.querySelector('.reviews__wrapper'),
     //     reviewsMobileSlider = document.querySelector('.reviews__row')
+    const worksSlider = new Swiper('.show-works__slider ', {
+        sumulateTouch: false, //or false
+        touchRatio: 1,
+        touchAngel: 45,
+        initialSlide: 3,
+        grabCursor: true, //or false
+        slideToClickedSlide: false, //or false
+        hashNavigation: {
+            watchState: false, // or false
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+            pageUpDown: true,
+        },
+        navigation: {
+            nextEl: '.show-works__arrow_next',
+            prevEl: '.show-works__arrow_prev',
+        },
+        // autoHeight: true,
+        slidesPerView: 3,
+        watchoverflow: false,
+        spaceBetween: 24,
+        slidesPerGroup: 1,
+        centeredSlides: true,
+        slidesPerColumn: 1, // - для коректной работы не юзать авто высоту.
+        loop: false, // or false - не работает с мультирядностью
+        loopedSlides: 0, // работает с loop
+        freeMode: false,
+        //скорость переключения слайдов:
+        speed: 600,
+        effect: 'slide',
+        breakpoints: {
+            100: {
+                initialSlide: 1,
+                slidesPerView: 'auto',
+                centeredSlides: false,
+            },
+            492: {
+                initialSlide: 1,
+                slidesPerView: 'auto',
+                centeredSlides: false,
+                
+            },
+            767: {
+                initialSlide: 1,
+                slidesPerView: 'auto',
+                centeredSlides: false,
+                
+            },
+            1024: {
+                slidesPerView: 3,
+                centeredSlides: true,
+            },
+            1500: {
+                slidesPerView: 3.8,
+            }
+        },
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+    });
 
     if (window.innerWidth > 1024) {
         document.querySelector('.sublist').classList.add('dropdown__list');
@@ -693,12 +761,12 @@ window.addEventListener("DOMContentLoaded", function () {
             observeSlideChildren: true,
         });
     }
-
     if (window.innerWidth < 1400) {
         const projectsContent = document.querySelector('.projects__content');
-        projectsContent.classList.add('container');
+        if (projectsContent) {
+            projectsContent.classList.add('container');
+        }
     }
-
     const checboxes = document.querySelectorAll('.checkbox');
     checboxes.forEach(checkbox => {
         checkbox.addEventListener("click", function () {
@@ -708,11 +776,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     const tabBtns = Array.from(document.querySelectorAll(".tab__btn"));
     const tabSlide = Array.from(document.querySelectorAll(".tab__slide"));
-
     const numBtns = tabBtns.length;
-
-    // root.style.setProperty("--num-btns", numBtns);
-
     if (tabBtns.length > 0) {
         tabBtns[0].classList.add("_active");
         tabSlide[0].classList.add("_active");
@@ -750,12 +814,6 @@ window.addEventListener("DOMContentLoaded", function () {
             tabSlide[index].classList.add("_active");
             activeSlide = tabSlide[index];
         }
-    }
-
-    const projectsContent = this.document.querySelector('.projects__content');
-    const windowWidth = this.window.innerWidth;
-    if (windowWidth < 1920) {
-        projectsContent.style.left = `${windowWidth}`
     }
 
     function formAddError(input) {

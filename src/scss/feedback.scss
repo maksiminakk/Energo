@@ -161,6 +161,18 @@
     font-weight: 700;
 }
 
+.form__input_no-anim:placeholder-shown {
+    
+    transform: translate(0,0);
+    font-weight: inherit;
+    &::placeholder {
+        opacity: 0.32;
+        color: #000;
+    }
+}
+
+
+
 .feedback-item {
     display: flex;
     color: #fff;
@@ -218,6 +230,14 @@
     &._error label {
         color: $red;
     }
+
+    &__title {
+        font-size: 16px;
+        opacity: 0.4;
+        line-height: 130%;
+        margin-bottom: 5px;
+        transition: all 0.4s ease 0s;
+    }
 }
 
 .input {
@@ -228,7 +248,7 @@
     border-radius: 8px;
     padding: 28px 10px 12px 20px;
     font-size: 18px;
-
+    transition: all 0.4s ease 0s;
     &:focus {
         border: 2px solid #1B89FC  ;
         &:focus~.form__label,
@@ -320,4 +340,8 @@
             border: none;
         }
     }
+}
+
+.form__input_no-anim {
+    padding: 0 20px;
 }

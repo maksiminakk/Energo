@@ -1,0 +1,47 @@
+.consultation {
+    background-image: url(../img/consultation/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__columns {
+        display: flex;
+        @media(max-width:1024px) {
+            display: block;
+        }
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        @media(max-width:1024px) {
+            flex: 1 1 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        @include adaptiv-value("margin-bottom", 70, 20, 1);
+        @media(max-width:600px) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__button {
+        @media(max-width:350px) {
+            gap: 10px;
+        }
+    }
+}
+

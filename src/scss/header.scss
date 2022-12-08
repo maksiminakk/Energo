@@ -10,6 +10,9 @@
 
         a {
             color: #fff;
+            &._active {
+                color: #1B89FC;
+            }
         }
 
         .sublist {
@@ -340,7 +343,10 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 900;
-
+    transition: all 0.4s ease 0s;
+    &._active {
+        color: #1B89FC;
+    }
 
 }
 

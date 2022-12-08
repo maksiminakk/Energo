@@ -110,9 +110,39 @@
             gap: 24px;
         }
         @media(max-width:492px) {
+            
             max-width: 400px;
             gap: 32px 16px;
         }
+    }
+
+    &__item-content {
+        display: flex;  
+        flex-direction: column;
+        gap: 24px;
+        @media(max-width:492px) {
+            flex-direction: row;
+            gap: 8px;
+        }
+    }
+
+    &__right {
+
+    }
+
+    &__label {
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 140%;
+        margin-bottom: 5px;
+        @media(max-width:492px) {
+            font-size: 12px;
+        }
+    }
+
+    &__sublabel {
+        font-size: 12px;
+        line-height: 16px;
     }
 
     &__item {

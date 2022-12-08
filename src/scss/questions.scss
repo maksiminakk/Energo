@@ -2,6 +2,15 @@
     background: #EBF4FF;
     @include adaptiv-value("padding-top", 120, 40, 1);
     @include adaptiv-value("padding-bottom", 120, 40, 1);
+    &._white {
+        background-color: #fff;
+        .questions-item {
+            box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+        }
+    }
+    &._bottom-padding {
+        padding-bottom: 250px;
+    }
     &__container {}
 
     &__body {}

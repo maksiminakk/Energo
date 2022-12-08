@@ -2,7 +2,10 @@
     background: #EBF4FF;
     mix-blend-mode: multiply;
     padding: 250px 0px 120px 0px;
-
+    &_top {
+        @include adaptiv-value("padding-top", 120, 40, 1);
+        @include adaptiv-value("padding-bottom", 120, 50, 1);
+    }
     @media(max-width:767px) {
         padding: 40px 0px 50px;
     }
