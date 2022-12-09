@@ -96,7 +96,9 @@
         height: 100%;
         top: 400px;
         left: -200px;
-        
+        &_no-tab {
+            top: 340px;
+        }
         @media(max-width:1900px) {
             left: -210px;
         }
