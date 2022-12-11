@@ -1,0 +1,131 @@
+.our-help {
+
+    &__container {}
+
+    &__body {}
+
+    &__top {
+        @include adaptiv-value("margin-bottom", 70, 30, 1);
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }   
+
+    &__text {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 130%;
+        @media(max-width:492px) {
+            font-size: 14px;
+        }
+    }
+
+    &__columns {
+        display: flex;
+        gap: 70px;
+        @media(max-width:1400px) {
+            gap: 35px;
+        }
+        @media(max-width:1024px) {
+            flex-direction: column;
+        }
+    }
+
+    &__column {
+        &:first-child {
+            flex: 0 1 650px/1130px * 100%;
+        }
+
+        &:last-child {
+            flex: 0 1 400px/1130px * 100%;
+        }
+    }
+
+    &__checkboxes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form {
+        background: #FFFFFF;
+        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        padding: 24px;
+
+        @media(max-width:492px) {
+            padding: 16px;
+        }
+        .feedback__title {
+            @include adaptiv-value("font-size", 38, 24, 1);
+        }
+    }
+}
+
+.checkboxes {
+    &__item {
+        margin-bottom: 17.5px;
+
+
+        &:last-child {
+            margin: 0;
+        }
+
+
+    }
+
+    &__label {
+        font-size: 18px;
+        line-height: 100%;
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        gap: 18px;
+        cursor: pointer;
+        span {
+            display: inline-block;
+            position: relative;
+
+            &:before,
+            &:after {
+                content: "";
+                display: block;
+
+            }
+
+            &:before {
+                border: 2px solid #1B89FC;
+                border-radius: 4px;
+                background-color: #fff;
+                width: 21px;
+                height: 21px;
+                flex: 0 0 21px;
+            }
+
+            &:after {
+                transition: all 0.4s ease 0s;
+                transform: scale(0);
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                width: 13px;
+                height: 13px;
+                flex: 0 0 13px;
+                background-color: #1B89FC;
+                border-radius: 4px;
+
+                border: 2px solid #1B89FC;
+            }
+        }
+        &._active {
+            span {
+                &:after {
+                    transform: scale(1);
+                }
+            }
+        }
+        @media(max-width:492px) {
+            font-size: 14px;
+        }
+    }
+}

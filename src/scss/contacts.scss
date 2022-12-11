@@ -1,0 +1,87 @@
+.contacts {
+
+    &__container {}
+
+    &__body {}
+
+    &__top {}
+
+    &__nav {}
+
+    &__title {}
+
+    &__content {}
+
+    &__panel {}
+
+    &__map {}
+}
+
+
+.contacts-panel {
+    background-color: #fff;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    @include adaptiv-value("padding-top", 32, 16, 1);
+
+    &__columns {
+        display: flex;
+    }
+
+    &__column {
+        flex: 0 1 50%;
+    }
+
+    &__item {
+        padding-right: 32px;
+        margin-right: 32px;
+        &_border {
+            border-right:1px solid #000;
+        }
+    }
+
+    &__top {
+        margin-bottom: 12px;
+    }
+
+    &__label {
+        font-size: 16px;
+        opacity: 0.4;
+        line-height: 100%;
+    }
+
+    &__point {
+        background: #DAEBFF;
+        border-radius: 8px;
+        color: #1B89FC;
+        padding: 12px 24px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    &__mail {}
+
+    &__content {}
+
+    &__title {}
+}
+
+.contacts-pane {
+
+    &__phone {}
+}
+
+.contacts-map {
+
+    &__map {}
+
+    &__panel {}
+
+    &__item {}
+
+    &__title {}
+
+    &__label {}
+
+    &__text {}
+}

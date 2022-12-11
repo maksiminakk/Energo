@@ -4,11 +4,13 @@
     // background-position: center;
     // background-size: cover;
     position: relative;
+
     // position: relative;
     &__bg {
-        
+
         height: 100%;
         width: 100%;
+
         img {
             position: absolute;
             top: 0;
@@ -20,7 +22,7 @@
             //     width: 1300px;
             //     object-fit: right;
             // }
-           
+
         }
     }
 
@@ -50,6 +52,7 @@
         @media(max-width:1024px) {
             gap: 30px;
         }
+
         @media(max-width:767px) {
             flex-direction: column;
         }
@@ -75,6 +78,7 @@
             @media(max-width:1024px) {
                 flex: 0 1 58%;
             }
+
             @media(max-width:767px) {
                 position: relative;
                 top: -90px;
@@ -88,6 +92,7 @@
         &:last-child {
             margin: 0;
         }
+
         @media(max-width:492px) {
             margin-bottom: 16px;
         }
@@ -98,6 +103,7 @@
     &__label {
         font-size: 16px;
         line-height: 120%;
+
         @media(max-width:492px) {
             font-size: 14px;
         }
@@ -135,6 +141,7 @@
         &:last-child {
             margin: 0;
         }
+
         @media(max-width:492px) {
             margin-bottom: 16px;
         }
@@ -150,7 +157,50 @@
     }
 
     &__checkbox {
+        font-size: 12px;
+        line-height: 120%;
+        position: relative;
+        display: inline-flex;
+        gap: 11px;
 
+        &:before,
+        &:after {
+            width: 18px;
+            height: 18px;
+            flex: 0 0 18px;
+            content: "";
+            display: block;
+            border-radius: 1px;
+            transition: all 0.4s ease 0s;
+            border: 1px solid $black;
+            background-color: #fff;
+        }
+
+        &:after {
+            background-image: url(../img/icons/check.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0);
+            transition: all 0.4s ease 0s;
+            border: none;
+            top: 0;
+        }
+
+        &._active {
+            &:after {
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+            }
+
+            &:before {
+                border: none;
+            }
+        }
     }
 }
 
@@ -162,9 +212,10 @@
 }
 
 .form__input_no-anim:placeholder-shown {
-    
-    transform: translate(0,0);
+
+    transform: translate(0, 0);
     font-weight: inherit;
+
     &::placeholder {
         opacity: 0.32;
         color: #000;
@@ -213,9 +264,11 @@
             opacity: 1;
             font-weight: 700;
         }
+
         input {
             border: 2px solid $blue3;
         }
+
         @media(max-width:767px) {
             label {
                 transform: translateY(-19px) translateX(-5px) scale(0.5);
@@ -249,8 +302,10 @@
     padding: 28px 10px 12px 20px;
     font-size: 18px;
     transition: all 0.4s ease 0s;
+
     &:focus {
-        border: 2px solid #1B89FC  ;
+        border: 2px solid #1B89FC;
+
         &:focus~.form__label,
         &:not(:placeholder-shown)~.form-label {
             transform: translateY(-18px) translateX(-7px) scale(0.6);
@@ -279,7 +334,7 @@
                 font-weight: 700;
             }
         }
-        
+
 
     }
 }
@@ -291,56 +346,13 @@
     left: 20px;
     opacity: 0.32;
     transition: all 0.2s ease 0s;
+
     @media(max-width:767px) {
         top: 17px;
     }
 }
 
-.checkbox {
-    font-size: 12px;
-    line-height: 120%;
-    position: relative;
-    display: inline-flex;
-    gap: 11px;
-
-    &:before,
-    &:after {
-        width: 18px;
-        height: 18px;
-        flex: 0 0 18px;
-        content: "";
-        display: block;
-        border-radius: 1px;
-        transition: all 0.4s ease 0s;
-        border: 1px solid $black;
-        background-color: #fff;
-    }
-
-    &:after {
-        background-image: url(../img/icons/check.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        position: absolute;
-        left: 0;
-        opacity: 0;
-        visibility: hidden;
-        transform: scale(0);
-        transition: all 0.4s ease 0s;
-        border: none;
-        top: 0;
-    }
-
-    &._active {
-        &:after {
-            opacity: 1;
-            visibility: visible;
-            transform: scale(1);
-        }
-        &:before {
-            border: none;
-        }
-    }
-}
+.checkbox {}
 
 .form__input_no-anim {
     padding: 0 20px;

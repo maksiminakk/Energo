@@ -11,9 +11,9 @@
         width: 100%;
         display: flex;
         align-items: center;
-        @media(max-height:900px) {
+        @media(max-height:1000px) {
             
-            min-height: 850px;
+            min-height: 1000px;
         }
         @media(max-width:1024px) {
             padding: calc(60px + var(--header-height)) 15px 60px 15px;
@@ -123,6 +123,13 @@
         
     }
 
+    &__top-label {
+        @include adaptiv-value("font-size", 21, 18, 1);
+        font-family: $MulishFF, "Helvetica Neue", Helvetica, sans-serif;
+        line-height: 130%;
+        margin-bottom: 20px;
+    }
+
     &__text {
         font-weight: 500;
         margin-bottom: 23px;
@@ -145,6 +152,11 @@
 
     &__title-big {
         @include adaptiv-value("font-size", 47, 32, 1);
+    }
+
+    &__title-sub {
+        font-weight: 700;
+        font-family: $MulishFF, "Helvetica Neue", Helvetica, sans-serif;
     }
 }
 

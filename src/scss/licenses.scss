@@ -1,0 +1,89 @@
+.licenses {
+    &__container {}
+
+    &__body {}
+
+    &__top {
+        
+    }
+
+    &__title {}
+
+    &__content {}
+
+    &__text {
+        @include adaptiv-value("font-size", 21, 16, 1);
+        line-height: 135%;
+        @include adaptiv-value("margin-bottom", 70, 35, 1);
+
+        p {
+            margin-bottom: 30px;
+            display: block;
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    &__image {
+        position: relative;
+        @include adaptiv-value("padding-bottom", 373, 210, 1);
+        flex: 0 1 calc(25% - 18px);
+
+        @media(max-width:1024px) {
+            flex: 0 1 calc(50% - 12px);
+            padding-bottom: 65%;
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+    }
+}
+
+.page-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 26.5px;
+
+    @media(max-width:1024px) {
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        color: $black;
+        &::after {
+            background-image: none;
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-left: 5px solid $black;
+            border-bottom: 5px solid transparent;
+        }
+    }
+}
+
+.page {
+    padding: 34.5px 0px 310px 0px;
+    background-color: #F7F8FB;
+
+    @media(max-width:1024px) {
+        padding-bottom: 250px;
+    }
+
+    @media(max-width:492px) {
+        padding-bottom: 200px;
+    }
+    &__top {
+        @include adaptiv-value("margin-bottom", 70, 35, 1);
+    }
+}

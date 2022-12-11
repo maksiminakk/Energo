@@ -1,0 +1,74 @@
+.optimization {
+    @include adaptiv-value("padding-top", 70, 35, 1);
+    @include adaptiv-value("padding-bottom", 70, 35, 1);
+    background-color: #00213F;
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__columns {
+        display: flex;
+        gap: 120px;
+        @media(max-width:1024px) {
+            gap: 40px;
+            flex-direction: column;
+        }
+    }
+
+    &__column {
+        &:first-child {
+            flex: 0 1 362px/1130px * 100%;
+        }
+        &:last-child {
+            flex: 0 1 630px/1130px * 100%;
+        }
+    }
+
+    &__title {
+        color: #fff;
+        line-height: 110%;
+    }
+
+    &__row {
+        display: flex;
+        gap: 50px;
+        @media(max-width:1024px) {
+            gap: 20px;
+        }
+        @media(max-width:492px) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        background-color: #fff;
+        border-radius: 8px;
+        flex: 0 1 50%;
+        padding: 24px;
+        @media(max-width:492px) {
+            padding: 16px;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 24px;
+        img, svg {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            @media(max-width:942px) {
+                width: 42px;
+                height: 42px;
+            }
+        }
+    }
+
+    &__label {
+        font-weight: 700;
+        line-height: 117%;
+        @include adaptiv-value("font-size", 18, 16, 1);
+    }
+}
+

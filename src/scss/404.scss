@@ -1,0 +1,44 @@
+.error-page {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 34, 65, 0.4) 0%, #002241 100%), url(../img/intro/404-bg.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: overlay;
+    color: #fff;
+    padding: 30px 0px;
+    &__container {
+        max-width: none;
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__label {
+        @include adaptiv-value("margin-bottom", 40, 20, 1);
+        @include adaptiv-value("font-size", 40, 22, 1);
+        font-weight: 900;
+        line-height: 120%;
+        
+    }
+
+    &__title {
+        color: rgba(255, 255, 255, 0.4);
+        @include adaptiv-value("font-size", 400, 160, 1);
+        font-weight: 900;
+    }
+
+    &__button {
+        padding: 24px 34px;
+        &:before {
+            display: none;
+        }
+    }
+}
+
