@@ -493,6 +493,20 @@ body._touch .dropdown__list .dropdown__button:after {
 }
 
 @font-face {
+  font-family: Mulish;
+  font-display: swap;
+  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Mulish;
+  font-display: swap;
+  src: url("../fonts/Mulish-Regular.woff2") format("woff2"), url("../fonts/Mulish-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
   font-family: Nunito;
   font-display: swap;
   src: url("../fonts/Nunito-Black.woff2") format("woff2"), url("../fonts/Nunito-Black.woff") format("woff");
@@ -509,6 +523,20 @@ body._touch .dropdown__list .dropdown__button:after {
 @font-face {
   font-family: Nunito;
   font-display: swap;
+  src: url("../fonts/Nunito-BlackItalic.woff2") format("woff2"), url("../fonts/Nunito-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: Nunito;
+  font-display: swap;
+  src: url("../fonts/Nunito-BoldItalic.woff2") format("woff2"), url("../fonts/Nunito-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: Nunito;
+  font-display: swap;
   src: url("../fonts/Nunito-ExtraBold.woff2") format("woff2"), url("../fonts/Nunito-ExtraBold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
@@ -516,16 +544,16 @@ body._touch .dropdown__list .dropdown__button:after {
 @font-face {
   font-family: Nunito;
   font-display: swap;
-  src: url("../fonts/Nunito-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Nunito-ExtraBoldItalic.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
+  src: url("../fonts/Nunito-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Nunito-ExtraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
 }
 @font-face {
   font-family: Nunito;
   font-display: swap;
-  src: url("../fonts/Nunito-BoldItalic.woff2") format("woff2"), url("../fonts/Nunito-BoldItalic.woff") format("woff");
+  src: url("../fonts/Nunito-Italic.woff2") format("woff2"), url("../fonts/Nunito-Italic.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
 }
 @font-face {
   font-family: Nunito;
@@ -537,16 +565,9 @@ body._touch .dropdown__list .dropdown__button:after {
 @font-face {
   font-family: Nunito;
   font-display: swap;
-  src: url("../fonts/Nunito-BlackItalic.woff2") format("woff2"), url("../fonts/Nunito-BlackItalic.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Nunito;
-  font-display: swap;
-  src: url("../fonts/Nunito-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Nunito-ExtraLightItalic.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
+  src: url("../fonts/Nunito-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Nunito-ExtraBoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
 }
 @font-face {
   font-family: Nunito;
@@ -559,15 +580,15 @@ body._touch .dropdown__list .dropdown__button:after {
   font-family: Nunito;
   font-display: swap;
   src: url("../fonts/Nunito-LightItalic.woff2") format("woff2"), url("../fonts/Nunito-LightItalic.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
+  font-weight: 300;
+  font-style: italic;
 }
 @font-face {
   font-family: Nunito;
   font-display: swap;
-  src: url("../fonts/Nunito-Medium.woff2") format("woff2"), url("../fonts/Nunito-Medium.woff") format("woff");
+  src: url("../fonts/Nunito-MediumItalic.woff2") format("woff2"), url("../fonts/Nunito-MediumItalic.woff") format("woff");
   font-weight: 500;
-  font-style: normal;
+  font-style: italic;
 }
 @font-face {
   font-family: Nunito;
@@ -580,22 +601,8 @@ body._touch .dropdown__list .dropdown__button:after {
   font-family: Nunito;
   font-display: swap;
   src: url("../fonts/Nunito-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Nunito-SemiBoldItalic.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Nunito;
-  font-display: swap;
-  src: url("../fonts/Nunito-MediumItalic.woff2") format("woff2"), url("../fonts/Nunito-MediumItalic.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: NunitoSans;
-  font-display: swap;
-  src: url("../fonts/NunitoSans-Bold.woff2") format("woff2"), url("../fonts/NunitoSans-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
+  font-weight: 600;
+  font-style: italic;
 }
 @font-face {
   font-family: NunitoSans;
@@ -605,17 +612,10 @@ body._touch .dropdown__list .dropdown__button:after {
   font-style: normal;
 }
 @font-face {
-  font-family: NunitoSans;
+  font-family: Nunito;
   font-display: swap;
-  src: url("../fonts/NunitoSans-BoldItalic.woff2") format("woff2"), url("../fonts/NunitoSans-BoldItalic.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: NunitoSans;
-  font-display: swap;
-  src: url("../fonts/NunitoSans-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/NunitoSans-ExtraBoldItalic.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Nunito-Medium.woff2") format("woff2"), url("../fonts/Nunito-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
@@ -628,15 +628,36 @@ body._touch .dropdown__list .dropdown__button:after {
 @font-face {
   font-family: NunitoSans;
   font-display: swap;
-  src: url("../fonts/NunitoSans-ExtraLight.woff2") format("woff2"), url("../fonts/NunitoSans-ExtraLight.woff") format("woff");
-  font-weight: 200;
+  src: url("../fonts/NunitoSans-Bold.woff2") format("woff2"), url("../fonts/NunitoSans-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: NunitoSans;
   font-display: swap;
-  src: url("../fonts/NunitoSans-ExtraLightItalic.woff2") format("woff2"), url("../fonts/NunitoSans-ExtraLightItalic.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/NunitoSans-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/NunitoSans-ExtraBoldItalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: NunitoSans;
+  font-display: swap;
+  src: url("../fonts/NunitoSans-BoldItalic.woff2") format("woff2"), url("../fonts/NunitoSans-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: NunitoSans;
+  font-display: swap;
+  src: url("../fonts/NunitoSans-ExtraBold.woff2") format("woff2"), url("../fonts/NunitoSans-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: NunitoSans;
+  font-display: swap;
+  src: url("../fonts/NunitoSans-ExtraLight.woff2") format("woff2"), url("../fonts/NunitoSans-ExtraLight.woff") format("woff");
+  font-weight: 200;
   font-style: normal;
 }
 @font-face {
@@ -649,8 +670,8 @@ body._touch .dropdown__list .dropdown__button:after {
 @font-face {
   font-family: NunitoSans;
   font-display: swap;
-  src: url("../fonts/NunitoSans-LightItalic.woff2") format("woff2"), url("../fonts/NunitoSans-LightItalic.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/NunitoSans-ExtraLightItalic.woff2") format("woff2"), url("../fonts/NunitoSans-ExtraLightItalic.woff") format("woff");
+  font-weight: 200;
   font-style: italic;
 }
 @font-face {
@@ -670,9 +691,9 @@ body._touch .dropdown__list .dropdown__button:after {
 @font-face {
   font-family: NunitoSans;
   font-display: swap;
-  src: url("../fonts/NunitoSans-SemiBold.woff2") format("woff2"), url("../fonts/NunitoSans-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
+  src: url("../fonts/NunitoSans-LightItalic.woff2") format("woff2"), url("../fonts/NunitoSans-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
 }
 @font-face {
   font-family: NunitoSans;
@@ -684,8 +705,8 @@ body._touch .dropdown__list .dropdown__button:after {
 @font-face {
   font-family: NunitoSans;
   font-display: swap;
-  src: url("../fonts/NunitoSans-ExtraBold.woff2") format("woff2"), url("../fonts/NunitoSans-ExtraBold.woff") format("woff");
-  font-weight: 800;
+  src: url("../fonts/NunitoSans-SemiBold.woff2") format("woff2"), url("../fonts/NunitoSans-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 .header {
@@ -5765,27 +5786,74 @@ body._touch .dropdown__list .dropdown__button:after {
 
 .contacts-panel {
   background-color: #fff;
+   padding: 32px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
-  padding-top: 32px;
+  margin-bottom: 50px;
 }
 @media (max-width: 1270px) {
   .contacts-panel {
-    padding-top: calc(16px + 16 * ((100vw - 360px) / 950));
+     padding: calc(16px + 16 * ((100vw - 360px) / 950));
+  }
+}
+@media (max-width: 1270px) {
+  .contacts-panel {
+    margin-bottom: calc(30px + 20 * ((100vw - 360px) / 950));
   }
 }
 .contacts-panel__columns {
   display: flex;
 }
+@media (max-width: 1024px) {
+  .contacts-panel__columns {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
 .contacts-panel__column {
   flex: 0 1 50%;
+  display: flex;
+  align-items: center;
+}
+.contacts-panel__column:last-child {
+  display: block;
+}
+@media (max-width: 1024px) {
+  .contacts-panel__column {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 600px) {
+  .contacts-panel__column {
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+  }
 }
 .contacts-panel__item {
   padding-right: 32px;
   margin-right: 32px;
 }
 .contacts-panel__item_border {
-  border-right: 1px solid #000;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+@media (max-width: 1024px) {
+  .contacts-panel__item_border {
+    border: none;
+  }
+}
+@media (max-width: 1400px) {
+  .contacts-panel__item {
+    padding-right: 16px;
+    margin-right: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .contacts-panel__item {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
 }
 .contacts-panel__top {
   margin-bottom: 12px;
@@ -5800,6 +5868,676 @@ body._touch .dropdown__list .dropdown__button:after {
   border-radius: 8px;
   color: #1B89FC;
   padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: 16px;
+}
+@media (max-width: 492px) {
+  .contacts-panel__point {
+    width: 100%;
+  }
+}
+.contacts-panel__mail {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+.contacts-panel__mail:before {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  background-image: url(../img/icons/mail.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contacts-panel__content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+@media (max-width: 1024px) {
+  .contacts-panel__content {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 492px) {
+  .contacts-panel__content {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+.contacts-panel__title {
   font-weight: 700;
   font-size: 16px;
+  line-height: 135%;
+}
+.contacts-panel__phone {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+.contacts-panel__phone:before {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  background-image: url(../img/icons/call.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contacts-map {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  padding-right: 40px;
+}
+@media (max-width: 1270px) {
+  .contacts-map {
+    padding-top: calc(30px + 45 * ((100vw - 360px) / 950));
+  }
+}
+@media (max-width: 1270px) {
+  .contacts-map {
+    padding-bottom: calc(30px + 45 * ((100vw - 360px) / 950));
+  }
+}
+@media (max-width: 1024px) {
+  .contacts-map {
+    padding: 30px 15px 250px 15px;
+  }
+}
+.contacts-map__map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.contacts-map__content {
+  display: flex;
+  justify-content: end;
+}
+.contacts-map__panel {
+  position: relative;
+  z-index: 2;
+  max-width: 360px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 24px;
+}
+@media (max-width: 1270px) {
+  .contacts-map__panel {
+    padding: calc(16px + 8 * ((100vw - 360px) / 950));
+  }
+}
+@media (max-width: 1024px) {
+  .contacts-map__panel {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.contacts-map__item {
+  margin-bottom: 14px;
+}
+@media (max-width: 492px) {
+  .contacts-map__item {
+    margin-bottom: 10px;
+  }
+}
+.contacts-map__title {
+  font-size: 24px;
+  color: #05192C;
+  line-height: 120%;
+  font-weight: 300;
+}
+@media (max-width: 1270px) {
+  .contacts-map__title {
+    font-size: calc(18px + 6 * ((100vw - 360px) / 950));
+  }
+}
+.contacts-map__label {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 120%;
+}
+@media (max-width: 492px) {
+  .contacts-map__label {
+    font-size: 14px;
+  }
+}
+.contacts-map__text {
+  font-size: 16px;
+  line-height: 120%;
+  font-weight: 700;
+}
+@media (max-width: 492px) {
+  .contacts-map__text {
+    font-size: 14px;
+  }
+}
+
+.projects-page__top {
+  margin-bottom: 50px;
+}
+@media (max-width: 1270px) {
+  .projects-page__top {
+    margin-bottom: calc(30px + 20 * ((100vw - 360px) / 950));
+  }
+}
+.projects-page__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 50px;
+}
+@media (max-width: 1270px) {
+  .projects-page__buttons {
+    margin-bottom: calc(30px + 20 * ((100vw - 360px) / 950));
+  }
+}
+@media (max-width: 492px) {
+  .projects-page__buttons {
+    gap: 12px;
+  }
+}
+.projects-page__button {
+  font-size: 12px;
+  padding: 12px 24px;
+  gap: 8px;
+}
+.projects-page__button svg path {
+  transition: all 0.4s ease 0s;
+}
+.projects-page__button._active {
+  background-color: #FCE300;
+  color: #100F00;
+}
+.projects-page__button._active svg path {
+  fill: #100F00;
+}
+@media (max-width: 492px) {
+  .projects-page__button {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+  .projects-page__button svg {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+  }
+}
+.projects-page__slide.tab__slide._active {
+  position: static;
+}
+.projects-page__row {
+  column-count: 4;
+  gap: 24px;
+  column-gap: 24px;
+  display: block;
+}
+.projects-page__row .projects-item {
+  display: block;
+  margin-bottom: 24px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+}
+@media (max-width: 1024px) {
+  .projects-page__row {
+    column-count: 2;
+  }
+}
+
+.news-page__top {
+  margin-bottom: 50px;
+}
+@media (max-width: 1270px) {
+  .news-page__top {
+    margin-bottom: calc(30px + 20 * ((100vw - 360px) / 950));
+  }
+}
+.news-page__row {
+  margin-bottom: 40px;
+}
+@media (max-width: 1270px) {
+  .news-page__row {
+    margin-bottom: calc(20px + 20 * ((100vw - 360px) / 950));
+  }
+}
+.page__row {
+  display: flex;
+  gap: 70px;
+}
+@media (max-width: 1270px) {
+  .page__row {
+    gap: calc(30px + 40 * ((100vw - 360px) / 950));
+  }
+}
+@media (max-width: 1024px) {
+  .page__row {
+    gap: 20px;
+  }
+}
+.page__column:first-child {
+  flex: 0 1 66.3716814159%;
+}
+@media (max-width: 767px) {
+  .page__column:first-child {
+    flex: 1 1 100%;
+  }
+}
+.page__column:last-child {
+  flex: 0 1 27.4336283186%;
+}
+@media (max-width: 767px) {
+  .page__column:last-child {
+    display: none;
+  }
+}
+.news-item {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  margin-bottom: 30px;
+}
+@media (max-width: 492px) {
+  .news-item {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.news-item:last-child {
+  margin: 0;
+}
+.news-item__left {
+  flex: 0 0 200px;
+  position: relative;
+  height: 100%;
+}
+@media (max-width: 492px) {
+  .news-item__left {
+    flex: 1 1 100%;
+  }
+}
+@media (max-width: 492px) {
+  .news-item__image {
+    position: relative;
+    padding-bottom: 60%;
+  }
+}
+.news-item__image img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.news-item__right {
+  flex: 1 1 100%;
+  padding: 32px;
+}
+@media (max-width: 1270px) {
+  .news-item__right {
+    padding: calc(16px + 16 * ((100vw - 360px) / 950));
+  }
+}
+@media (max-width: 1024px) {
+  .news-item__right {
+    padding: 16px;
+  }
+}
+.news-item__point {
+  margin-bottom: 14px;
+}
+@media (max-width: 1270px) {
+  .news-item__point {
+    margin-bottom: calc(8px + 6 * ((100vw - 360px) / 950));
+  }
+}
+.news-item__label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 120%;
+  opacity: 0.4;
+}
+.news-item__title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 125%;
+}
+@media (max-width: 1270px) {
+  .news-item__title {
+    font-size: calc(16px + 5 * ((100vw - 360px) / 950));
+  }
+}
+.news-item__text {
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.pagination__body {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.pagination__item {
+  transition: all 0.4s ease 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.pagination__item._active {
+  background-color: #1B89FC;
+  color: #fff;
+}
+.pagination__item._rotate {
+  transform: rotate(180deg);
+}
+
+.news-sidebar {
+  height: auto;
+  display: inline-block;
+  background: #fff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 24px;
+}
+@media (max-width: 1270px) {
+  .news-sidebar {
+    padding: calc(16px + 8 * ((100vw - 360px) / 950));
+  }
+}
+.news-sidebar__title {
+  font-weight: 900;
+  line-height: 125%;
+  font-size: 21px;
+  margin-bottom: 24px;
+}
+@media (max-width: 1270px) {
+  .news-sidebar__title {
+    font-size: calc(17px + 4 * ((100vw - 360px) / 950));
+  }
+}
+@media (max-width: 1270px) {
+  .news-sidebar__title {
+    margin-bottom: calc(16px + 8 * ((100vw - 360px) / 950));
+  }
+}
+.news-sidebar__item {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.news-sidebar__image img {
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
+  border-radius: 4px;
+}
+.news-sidebar__label {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+}
+.news-sidebar__button {
+  display: flex;
+  width: 100%;
+}
+
+.blog-page__row {
+  margin-bottom: 40px;
+}
+@media (max-width: 492px) {
+  .blog-page__row {
+    margin-bottom: 25px;
+  }
+}
+.blog-page-item {
+  margin-bottom: 32px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+@media (max-width: 1270px) {
+  .blog-page-item {
+    margin-bottom: calc(18px + 14 * ((100vw - 360px) / 950));
+  }
+}
+.blog-page-item:last-child {
+  margin: 0;
+}
+.blog-page-item__image {
+  position: relative;
+  padding-bottom: 47%;
+}
+.blog-page-item__image img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+}
+.blog-page-item__content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media (max-width: 1270px) {
+  .blog-page-item__content {
+    padding: calc(16px + 8 * ((100vw - 360px) / 950));
+  }
+}
+.text-page {
+  font-size: 16px;
+}
+.text-page__top {
+  margin-bottom: 26px;
+}
+.text-page__small-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.text-page__point {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.text-page__title {
+  margin-bottom: 24px;
+}
+.text-page__label {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+.text-page__main-text {
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 32px;
+}
+@media (max-width: 1270px) {
+  .text-page__main-text {
+    margin-bottom: calc(24px + 8 * ((100vw - 360px) / 950));
+  }
+}
+.text-page__main-image {
+  position: relative;
+  padding-bottom: 67.2%;
+  border-radius: 5px;
+  margin-bottom: 32px;
+}
+@media (max-width: 1270px) {
+  .text-page__main-image {
+    margin-bottom: calc(24px + 8 * ((100vw - 360px) / 950));
+  }
+}
+.text-page__main-image img {
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.text-page__subtitle {
+  margin-bottom: 10px;
+  font-weight: 900;
+  line-height: 150%;
+  font-size: 26px;
+}
+@media (max-width: 1270px) {
+  .text-page__subtitle {
+    font-size: calc(20px + 6 * ((100vw - 360px) / 950));
+  }
+}
+.text-page__text {
+  line-height: 150%;
+}
+.text-page__list {
+  padding-left: 15px;
+  margin-bottom: 32px;
+}
+@media (max-width: 1270px) {
+  .text-page__list {
+    margin-bottom: calc(24px + 8 * ((100vw - 360px) / 950));
+  }
+}
+.text-page__columns {
+  gap: 24px;
+  display: flex;
+  margin-bottom: 60px;
+}
+@media (max-width: 1270px) {
+  .text-page__columns {
+    margin-bottom: calc(20px + 40 * ((100vw - 360px) / 950));
+  }
+}
+.text-page__sub-column:first-child {
+  flex: 0 1 55.3846153846%;
+}
+.text-page__sub-column:last-child {
+  flex: 0 1 40%;
+}
+.text-page__sub-image {
+  position: relative;
+  padding-bottom: 67.5%;
+  border-radius: 5px;
+}
+.text-page__sub-image img {
+  border-radius: 5px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.text-page__sub-text {
+  color: #888888;
+  font-size: 12px;
+  line-height: 135%;
+}
+.text-page__sub-heading {
+  font-weight: 900;
+  font-size: 21px;
+}
+@media (max-width: 1270px) {
+  .text-page__sub-heading {
+    font-size: calc(18px + 3 * ((100vw - 360px) / 950));
+  }
+}
+
+.page__row_2 {
+  display: flex;
+  gap: 170px;
+}
+@media (max-width: 1024px) {
+  .page__row_2 {
+    gap: 30px;
+  }
+}
+.page__row_2 .page__column:first-child {
+  flex: 0 1 57.5221238938%;
+}
+@media (max-width: 1024px) {
+  .page__row_2 .page__column:first-child {
+    flex: 1 1 100%;
+  }
+}
+.page__row_2 .page__column:last-child {
+  flex: 0 1 28.3185840708%;
+}
+@media (max-width: 1024px) {
+  .page__row_2 .page__column:last-child {
+    display: none;
+  }
+}
+.text-page-social {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid #D9D9D9;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+@media (max-width: 1270px) {
+  .text-page-social {
+    margin-top: calc(20px + 40 * ((100vw - 360px) / 950));
+  }
+}
+@media (max-width: 1270px) {
+  .text-page-social {
+    padding-top: calc(20px + 10 * ((100vw - 360px) / 950));
+  }
+}
+.text-page-social__label {
+  opacity: 0.64;
+  font-size: 21px;
+  font-weight: 700;
+}
+@media (max-width: 1270px) {
+  .text-page-social__label {
+    font-size: calc(18px + 3 * ((100vw - 360px) / 950));
+  }
 }
