@@ -1,0 +1,73 @@
+
+.modal-consultation {
+
+    &__body {
+    }
+
+    &__content {
+        width: 870px;
+        @media(max-width:1024px) {
+            width: 600px;
+        }
+    }
+
+    &__close {
+    }
+
+    &__content-body {
+    }
+
+    &__columns {
+        display: flex;
+        gap: 32px;
+        @media(max-width:660px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__column {
+        &:first-child {
+            flex: 0 1 42%;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+        &:last-child {
+            flex: 0 1 58%;
+        }
+    }
+
+    &__image {
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+    }
+
+    &__form {
+    }
+}
+.close-popup {
+}
+.form {
+
+    &__item {
+    }
+
+    &__input {
+    }
+
+    &__label {
+    }
+
+    &__button {
+    }
+
+    &__checkbox {
+    }
+}

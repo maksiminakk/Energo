@@ -25,6 +25,38 @@
         }
 
     }
+    &_small-height {
+        .container {
+            min-height: 890px;
+            
+            @media(max-height:1000px) {
+            
+                min-height: 890px;
+            }
+            @media(max-width:492px) {
+                min-height: 100%;
+            }
+        }
+        
+    }
+    &_vacansies {
+        .container {
+            @include adaptiv-value("padding-bottom", 120, 40, 1);
+            align-items: flex-end;
+            min-height: 660px;
+            @media(max-height:1000px) {
+            
+                min-height: 660px;
+            }
+            @media(max-width:492px) {
+                min-height: 100%;
+            }
+        }
+        .intro__text {
+            max-width: 460px;
+        }
+
+    }
     @media(max-width:1300px) {
         padding: 0px 0px 150px 0px;
         background-position: right center;
@@ -239,6 +271,16 @@
         @media(max-width:1024px) {
             display: none;
         }
+        &_partners {
+            position: relative;
+            top: 30px;
+            left: 0;
+            margin-bottom: 120px;
+        }
+        &_static {
+            position: static;
+            margin-bottom: 17.5px;
+        }
     }
 
     &__nav-item {
@@ -262,6 +304,31 @@
             font-weight: 400;
             &:after {
                 display: none;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 27px;
+        margin-top: 30px;
+        .button {
+            height: 72px;
+
+        }
+        .button-white {
+            height: 72px;
+        }
+        @media(max-width:492px) {
+            flex-direction: column;
+            gap: 16px;
+            .button {
+                height: 52px;
+    
+            }
+            .button-white {
+                height: 52px;
             }
         }
     }

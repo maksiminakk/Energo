@@ -1,0 +1,97 @@
+.about-partners {
+    @include adaptiv-value("padding-top", 60, 30, 1);
+    @include adaptiv-value("padding-bottom", 120, 50, 1);
+
+    &__container {}
+
+    &__body {}
+
+    &__banner {
+        background: #EBF4FF;
+        border-radius: 8px;
+        @include adaptiv-value("margin-bottom", 100, 30, 1);
+        border-left: 10px solid #1B89FC;
+        padding: 25px 32px 25px 50px;
+        @media(max-width:767px) {
+            border-left: 5px solid #1B89FC;
+            padding: 16px 16px 16px 22px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        gap: 120px;
+        @include adaptiv-value("margin-bottom", 120, 50, 1);
+        @media(max-width:1024px) {
+            gap: 50px;
+        }
+        @media(max-width:767px) {
+            flex-direction: column;
+            gap: 30px;
+        }
+        &_mobile-reverse {
+            @media(max-width:767px) {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+    &__column {
+        &_text {
+            flex: 0 1 552px/1130px * 100%;
+            @media(max-width:1024px) {
+                flex: 0 1 50%;
+            }
+        }
+        &_image {
+            flex: 0 1 456px/1130px * 100%;
+            position: relative;
+            border-radius: 8px;
+            @media(max-width:1024px) {
+                flex: 0 1 50%;
+            }
+        }
+    }
+
+    &__text-block {}
+
+    &__title {
+        margin-bottom: 32px;
+    }
+
+    &__text {
+        @include adaptiv-value("font-size", 21, 16, 1);
+        line-height: 152%;
+    }
+
+    &__image {
+        @media(max-width:767px) {
+            position: relative;
+            padding-bottom: 50%;
+        }
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+    }
+
+    &__list {
+        padding-left: 22px;
+    }
+}
+
+.about-partners-banner {
+
+    &__text {
+        font-style: italic;
+        font-weight: 300;
+        color: #1B89FC;
+        line-height: 150%;
+        @include adaptiv-value("font-size", 40, 24, 1);
+    }
+}
