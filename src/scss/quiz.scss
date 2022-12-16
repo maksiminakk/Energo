@@ -1,0 +1,172 @@
+.quiz {
+    background: #EBF4FF;
+
+    &__container {
+        margin: 0 auto;
+        max-width: 900px;
+        padding: 0px 15px;
+    }
+
+    &__body {}
+
+    &__main-title {
+        @include adaptiv-value("margin-bottom", 120, 40, 1);
+    }
+
+    &__steps {
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    &__step {
+        transform: translate(0, 100%);
+        padding: 32px;
+        position: absolute;
+        background: #FFFFFF;
+        transition: all 0.7s ease 0s;
+        border-radius: 8px;
+        opacity: 0;
+        width: 100%;
+
+        &._active {
+            position: relative;
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 21px;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    &__row {
+        display: flex;
+        gap: 32px;
+    }
+
+    &__item {
+        cursor: pointer;
+        flex: 1 1 25%;
+        padding: 24px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        border: 2px solid #1B89FC;
+        border-radius: 8px;
+        transition: all 0.4s ease 0s;
+
+        &:hover {
+            background: rgba(27, 137, 252, 0.16);
+        }
+    }
+
+    &__icon {
+        margin-bottom: 24px;
+        img, svg {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+        }
+    }
+
+    &__label {
+        text-decoration-line: underline;
+        font-size: 16px;
+        line-height: 135%;
+        text-align: center;
+    }
+
+    &__file-form {
+        position: relative;
+        margin-bottom: 32px;
+    }
+
+    &__file {
+        opacity: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    &__file-button {
+        display: inline-flex;
+        cursor: pointer;
+        height: 95px;
+        align-items: center;
+        justify-content: center;
+        border: 2px dashed #1B89FC;
+        border-radius: 8px;
+        width: 100%;
+        font-weight: 700;
+        font-size: 16px;
+
+        span {
+            color: #1B89FC;
+            margin-right: 6px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: end;
+    }
+
+    &__button {
+        padding: 12px 34px;
+        border: none;
+        display: inline-flex;
+        flex: inherit;
+    }
+
+    &__preview {}
+
+    &__form {}
+}
+
+.quiz-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    background: #F5F5F5;
+    border-radius: 8px;
+    margin-bottom: 32px;
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__icon {}
+
+    &__title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 140%;
+    }
+
+    &__right {}
+
+    &__button {
+        &:before {
+            content: "";
+            display: block;
+            background-image: url(../img/icons/delete_forever.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 32px;
+            flex: 0 0 32px;
+            height: 32px;
+        }
+    }
+}

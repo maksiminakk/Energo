@@ -1,0 +1,25 @@
+.modal-message {
+
+    &__body {}
+
+    &__content {
+        width: 485px;
+    }
+
+    &__content-body {}
+
+    &__title {
+        font-weight: 900;
+        @include adaptiv-value("font-size", 21, 18, 1);
+        margin-bottom: 24px;
+        line-height: 130%;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 140%;
+        @media(max-width:492px) {
+            font-size: 16px;
+        }
+    }
+}

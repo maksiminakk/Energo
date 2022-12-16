@@ -314,15 +314,18 @@ window.addEventListener("DOMContentLoaded", function () {
             unlock = true;
         }, timeout);
     }
-    const popupActive = document.querySelector('.popup.open');
-    if (popupActive) {
-        document.addEventListener('keydown', function (e) {
-            if (e.which === 27) {
+
+    document.addEventListener('keydown', function (e) {
+        const popupActive = document.querySelector('.popup.open');
+        if (e.which === 27) {
+            if (popupActive) {
                 popupClose(popupActive);
             }
-        });
-    }
-   
+
+        }
+    });
+
+
     [].forEach.call(document.querySelectorAll('.tel'), function (input) {
         var keyCode;
 
@@ -384,16 +387,22 @@ window.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
             let error = formValidate(form);
         }
-    
+
         function formValidate(form) {
             let error = 0;
             let formReq = document.querySelectorAll('._req');
-    
+
             for (let index = 0; index < formReq.length; index++) {
                 const input = formReq[index];
                 formRemoveError(input);
                 if (input.classList.contains('tel')) {
                     if (numberTest(input)) {
+                        formAddError(input);
+                        error++;
+                    }
+                }
+                if (input.classList.contains('_mail')) {
+                    if (mailTest(input)) {
                         formAddError(input);
                         error++;
                     }
@@ -403,17 +412,14 @@ window.addEventListener("DOMContentLoaded", function () {
                         error++;
                     }
                 }
-                if (input.classList.contains('_name')) {
-                    if (codeTest(input)) {
-                        formAddError(input);
-                        error++;
-                    }
-                } else {
-                    if (input.value >= 3) {
-                        formAddError(input);
-                        error++;
-                    }
-                }
+
+                // if (input.classList.contains('_mail')) {
+                //     if (codeTest(input)) {
+                //         formAddError(input);
+                //         error++;
+                //     }
+                // }
+
             }
             return error;
         }
@@ -492,7 +498,7 @@ window.addEventListener("DOMContentLoaded", function () {
                 // Обратите внимание, что в API 2.1 по умолчанию карта создается с элементами управления.
                 // Если вам не нужно их добавлять на карту, в ее параметрах передайте пустой массив в поле controls.
                 controls: [],
-                
+
             });
 
             var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
@@ -520,7 +526,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
             myMap.geoObjects.add(myPlacemark);
             myMap.events.add('click', function () {
-                myPlacemark.options.set('iconImageHref','img/icons/map-icon.svg');
+                myPlacemark.options.set('iconImageHref', 'img/icons/map-icon.svg');
             });
             myPlacemark.events
                 // .add('mouseenter', function (e) {
@@ -531,10 +537,10 @@ window.addEventListener("DOMContentLoaded", function () {
                 // .add('mouseleave', function (e) {
                 //     e.get('target').options.set('iconImageHref','img/icons/map-icon.svg');
                 // })
-                .add('click', function(e) {
-                    e.get('target').options.set('iconImageHref','img/icons/hover-map-icon.svg');
+                .add('click', function (e) {
+                    e.get('target').options.set('iconImageHref', 'img/icons/hover-map-icon.svg');
                 });
-                
+
 
 
         });
@@ -635,13 +641,13 @@ window.addEventListener("DOMContentLoaded", function () {
                 initialSlide: 1,
                 slidesPerView: 'auto',
                 centeredSlides: false,
-                
+
             },
             767: {
                 initialSlide: 1,
                 slidesPerView: 'auto',
                 centeredSlides: false,
-                
+
             },
             1024: {
                 slidesPerView: 3,
@@ -680,7 +686,7 @@ window.addEventListener("DOMContentLoaded", function () {
         watchoverflow: false,
         spaceBetween: 16,
         slidesPerGroup: 1,
-        loopedSlides: 0, 
+        loopedSlides: 0,
         freeMode: false,
         speed: 600,
         effect: 'slide',
@@ -867,6 +873,59 @@ window.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    
+    const quizItems = this.document.querySelectorAll('.quiz__item');
+
+    quizItems.forEach(item => {
+        item.addEventListener("click", function () {
+            const activeStep = item.closest('.quiz__step');
+            activeStep.nextElementSibling.classList.add('_active');
+            activeStep.classList.remove('_active');
+        });
+    });
+
+    const fileInput = this.document.getElementById('fileInput'),
+        filePreview = this.document.getElementById('filePreview');
+
+    if (fileInput) {
+        fileInput.addEventListener('change', function () {
+            uploadFile(fileInput.files[0]);
+        });
+    }
+    
+    function uploadFile (file) {
+        if (!['application/pdf'].includes(file.type)) {
+            alert('Разрешены только pdf файлы');
+            fileInput.value = '';
+            return;
+        }
+
+        var reader = new FileReader();
+        reader.fileName = file.name;
+        reader.onload = function (e) {
+            filePreview.innerHTML = `<div class="quiz__preview quiz-preview">
+            <div class="quiz-preview__left  ">
+                <div class="quiz-preview__icon">
+                    <img src="img/icons/article.svg" alt="">
+                </div>
+                <div id="filePreview" class="quiz-preview__title">
+                    ${e.target.fileName}
+                </div>
+            </div>
+            <div class="quiz-preview__right">
+                <button type="button" class="quiz-preview__button">
+
+                </button>
+            </div>
+        </div>`;
+        };
+        reader.onerror = function (e) {
+            alert('Ошибка');
+
+        };
+        reader.readAsDataURL(file);
+    }
+
     function formAddError(input) {
         input.parentElement.classList.add('_error');
         input.classList.add('_error');
@@ -879,6 +938,10 @@ window.addEventListener("DOMContentLoaded", function () {
 
     function numberTest(input) {
         return !/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(input.value);
+    }
+
+    function mailTest(input) {
+        return !/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/.test(input.value);
     }
 
     const servicesItems = document.querySelectorAll('.services__item');
@@ -914,3 +977,6 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 } else {
     document.body.classList.add('_pc');
 };
+
+
+

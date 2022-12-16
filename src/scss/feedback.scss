@@ -147,6 +147,11 @@
         }
     }
 
+    &__textarea {
+        resize: none;
+        min-height: 112px;
+    }
+
     &__input {}
 
     &__label {}
@@ -265,7 +270,7 @@
             font-weight: 700;
         }
 
-        input {
+        input, textarea {
             border: 2px solid $blue3;
         }
 
@@ -277,6 +282,10 @@
     }
 
     &._error input._req {
+        border: 2px solid $red;
+    }
+
+    &._error textarea._req {
         border: 2px solid $red;
     }
 
