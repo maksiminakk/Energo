@@ -4,6 +4,7 @@
     // background-position: center;
     // background-size: cover;
     position: relative;
+    
 
     // position: relative;
     &__bg {
@@ -56,12 +57,22 @@
         @media(max-width:767px) {
             flex-direction: column;
         }
+        &._visible {
+            .feedback__column {
+                &:first-child {
+                    transform: translate(0, -120px);
+                }
+            }
+        }
     }
 
     &__column {
+        overflow: hidden;
         &:first-child {
-            flex: 0 1 35%;
-            transform: translate(0, -120px);
+            flex: 0 1 37.5%;
+            overflow: hidden;
+            transition: all 1.2s ease 0s;
+            transform: translate(0, 150%);
             background-color: #fff;
             padding: 24px;
             box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
@@ -70,10 +81,13 @@
             @media(max-width:1024px) {
                 flex: 0 1 42%;
             }
+            @media(max-width:492px) {
+                transform: translate(0, -200px);
+            }
         }
 
         &:nth-child(2) {
-            flex: 0 1 65%;
+            flex: 0 1 62.5%;
 
             @media(max-width:1024px) {
                 flex: 0 1 58%;
@@ -133,7 +147,7 @@
 }
 
 .form {
-
+    
     &__item {
         position: relative;
         margin-bottom: 24px;
@@ -233,7 +247,22 @@
     display: flex;
     color: #fff;
     gap: 24px;
-
+    transition: all 0.8s ease 0s;
+    &:nth-child(2) {
+        transition: all 0.8s ease 0.2s;
+    }
+    &:nth-child(3) {
+        transition: all 0.8s ease 0.4s;
+    }
+    &:nth-child(4) {
+        transition: all 0.8s ease 0.6s;
+    }
+    &:nth-child(5) {
+        transition: all 0.8s ease 0.8s;
+    }
+    &:nth-child(6) {
+        transition: all 0.8s ease 1s;
+    }
     &__left {}
 
     &__icon {
@@ -352,6 +381,7 @@
     position: absolute;
     font-size: 18px;
     top: 22px;
+    pointer-events: none;
     left: 20px;
     opacity: 0.32;
     transition: all 0.2s ease 0s;

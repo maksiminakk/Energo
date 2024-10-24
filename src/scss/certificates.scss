@@ -52,6 +52,7 @@
     }
 
     &__item {
+        display: block;
         @media(max-width:767px) {
             width: 140px;
             display: flex;
@@ -64,6 +65,7 @@
     }
 
     &__image {
+        display: block;
         padding-bottom: 200px;
         position: relative;
         @media(max-width:767px) {

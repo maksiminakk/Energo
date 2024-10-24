@@ -270,16 +270,38 @@
 
         &._active {
             left: 0;
+            &:after {
+                right: 0;
+            }
+            &:before {
+                left: 0;
+            }
         }
         &:after {
-            position: absolute;
+            position: fixed;
             width: 60px;
             height: 100%;
             content: "";
             display: block;
             background: #C2CAD1;
-            right: -0;
+            right: 100%;
             top: -0;
+            z-index: 3;
+            transition: all 0.4s ease 0s;
+
+        }
+        &:before {
+            content: "";
+            display: block;
+            background-color: #002241;
+            height: 60px;
+            width: 100%;
+            transition: all 0.4s ease 0s;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            transition: all 0.4s ease 0s;
+            z-index: 2;
         }
         
     }
@@ -329,7 +351,7 @@
     &__container {
         position: relative;
         @media(max-width:1024px) {
-            
+            z-index: 1;
         }
     }
 

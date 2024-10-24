@@ -19,9 +19,13 @@
 
     &__row {
         display: flex;
-        align-items: center;
         justify-content: space-between;
         gap: 30px;
+        &._visible {
+            .object-type__item {
+                transform: scale(1);
+            }
+        }
         @media(max-width:1024px) {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -42,9 +46,12 @@
         }
         .object-type__sublabel {
             text-align: left;
-            text-decoration: underline;
             color: $black;
+            position: relative;
             line-height: 130%;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            padding-bottom: 2px;
             @media(max-width:492px) {
                 br {
                     display: none;

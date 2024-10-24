@@ -15,6 +15,27 @@
     @media(max-width:492px) {
         
     }
+
+    &_no-tab {
+        min-height: 1300px;
+        padding: 200px 0px 0px 0px;
+        @media(max-width:767px) {
+            padding: 40px 0px 50px;
+            min-height: 100%;
+        }
+        .projects__row {
+            height: 1350px;
+            @media(max-width:1400px) {
+                height: 100%;
+            }
+        }
+        .projects__button {
+            bottom: 170px;
+            @media(max-width:1400px) {
+                bottom: 0;
+            }
+        }
+    }
     &__container {
         position: relative;
         z-index: 4;
@@ -97,7 +118,7 @@
         top: 400px;
         left: -200px;
         &_no-tab {
-            top: 340px;
+            top: 330px;
         }
         @media(max-width:1900px) {
             left: -210px;
@@ -194,6 +215,7 @@
         }
         @media(max-width:767px) {
             margin-bottom: 40px;
+            padding: 20px 15px 0px 15px;
         }
         @media(max-width:492px) {
             max-width: 400px;
@@ -217,8 +239,11 @@
             content: "";
             display: block;
             background: linear-gradient(180deg, rgba(0, 34, 65, 0) 0%, #002241 88.54%);
+            @media(max-width:1400px) {
+                display: none;
+            }
         }
-        height: 1400px;
+        height: 1350px;
         gap: 24px;
         @media(max-width:1400px) {
             height: 100%;
@@ -243,7 +268,7 @@
         position: absolute;
         padding: 16px 34px;
         z-index: 6;
-        bottom: 220px;
+        bottom: 210px;
         max-width: 320px;
         left: calc(50% - 160px);
         white-space: nowrap;
@@ -288,14 +313,18 @@
 }
 
 .projects-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
     width: 264px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
     background: #FFFFFF;
     border-radius: 8px;
     overflow: hidden;
     position: relative;
     z-index: 4;
     opacity: 0.3;
-
+    
+    transform: translate(0, 120%);
     color: $black;
     &:nth-child(1), &:nth-child(2), &:nth-child(3) , &:nth-child(4) {
         transition: all 0.6s ease 0s;
@@ -402,9 +431,7 @@
     visibility: hidden;
     pointer-events: none;
     .projects-item {
-        
         transform: translate(0, 150%)
-        
     }
     &:before {
         display: none;

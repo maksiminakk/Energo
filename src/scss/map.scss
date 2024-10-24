@@ -5,11 +5,16 @@
     @include adaptiv-value("padding-bottom", 90, 40, 1);
     color: #fff;
 
-    &__container {}
+    &__container {
+        @media(max-width:492px) {
+            padding: 0px 40px;
+        }
+    }
 
     &__body {}
 
     &__top {
+        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -22,9 +27,14 @@
         }
     }
 
-    &__title {}
+    &__title {
+        transition: all 0.8s ease 0s;
+        transform: translate(-150%, 0);
+    }
 
     &__right {
+        transition: all 0.8s ease 0s;
+        transform: translate(150%,0);
         display: flex;
         align-items: center;
         gap: 16px;

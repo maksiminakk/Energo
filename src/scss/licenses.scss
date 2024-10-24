@@ -4,7 +4,7 @@
     &__body {}
 
     &__top {
-        
+        overflow: hidden;
     }
 
     &__title {}
@@ -17,8 +17,10 @@
         @include adaptiv-value("margin-bottom", 70, 35, 1);
 
         p {
+            overflow: hidden;
             margin-bottom: 30px;
             display: block;
+
         }
     }
 
@@ -26,13 +28,14 @@
         display: flex;
         gap: 24px;
         flex-wrap: wrap;
+        overflow: hidden;
     }
 
     &__image {
         position: relative;
         @include adaptiv-value("padding-bottom", 373, 210, 1);
         flex: 0 1 calc(25% - 18px);
-
+        transition: all 0.8s ease 0s;
         @media(max-width:1024px) {
             flex: 0 1 calc(50% - 12px);
             padding-bottom: 65%;
@@ -46,6 +49,29 @@
             left: 0;
             position: absolute;
         }
+        transform: translate(0,150%);
+        &:nth-child(2) {
+            transition: all 0.8s ease 0.1s;
+        }
+        &:nth-child(3) {
+            transition: all 0.8s ease 0.2s;
+        }
+        &:nth-child(4) {
+            transition: all 0.8s ease 0.3s;
+        }
+        &:nth-child(5) {
+            transition: all 0.8s ease 0.4s;
+        }
+        &:nth-child(6) {
+            transition: all 0.8s ease 0.5s;
+        }
+        &:nth-child(7) {
+            transition: all 0.8s ease 0.6s;
+        }
+        &:nth-child(8) {
+            transition: all 0.8s ease 0.7s;
+        }
+
     }
 }
 
@@ -80,9 +106,6 @@
         padding-bottom: 250px;
     }
 
-    @media(max-width:492px) {
-        padding-bottom: 200px;
-    }
     &__top {
         @include adaptiv-value("margin-bottom", 70, 35, 1);
     }

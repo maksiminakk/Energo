@@ -17,6 +17,7 @@
     &__columns {
         display: flex;
         gap: 150px;
+        overflow: hidden;
         align-items: center;
         @media(max-width:1024px) {
             gap: 30px;
@@ -27,6 +28,13 @@
         @media(max-width:600px) {
             flex-direction: column;
         }
+        &._visible {
+            .form-section__column {
+                &:first-child {
+                    transform: translate(0,0);
+                }
+            }
+        }
     }
 
     &__column {
@@ -34,6 +42,8 @@
 
         &:first-child {
             color: #fff;
+            transform: translate(-150%,0);
+            transition: all 0.8s ease 0s;
         }
 
         &:last-child {

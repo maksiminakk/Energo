@@ -9,16 +9,16 @@ $maxWidthContainer: 1270;
         //только если меньше контейнера:
         #{$property}: $startSize + px;
         @media (max-width: #{$maxWidthContainer + px}) {
-            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidthContainer - 320}));
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidthContainer - 375}));
         }
     } @else if $type==2 {
         //только если больше контейнера
         #{$property}: $startSize + px;
         @media (min-width: #{$maxWidthContainer + px}) {
-            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidth - 320}));
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth - 375}));
         }
     } @else {
-        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidth - 320}));
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth - 375}));
     }
 }
 

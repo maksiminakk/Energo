@@ -16,12 +16,17 @@
     &__body {}
 
     &__top {
+        overflow: hidden;
         @include adaptiv-value("margin-bottom", 70, 30, 1);
     }
 
-    &__label {}
+    &__label {
+        transform: translate(-150%,0);
+    }
 
-    &__title {}
+    &__title {
+        transform: translate(150%,0);
+    }
 
     &__content {
 
@@ -55,6 +60,11 @@
                 top: 20px;
             }
         }
+        &_flex {
+            @media(max-width:1400px) {
+                gap: 12px;
+            }
+        }
     }
 
     &__nav-item {
@@ -72,17 +82,7 @@
         transition: all 0.4s ease 0s;
         position: relative;
         z-index: 2;
-        &::before {
-            @media(max-width:492px) {
-                position: absolute;
-                content: "";
-                display: block;
-                width: 100%;
-                height: 1px;
-                background-color: #000;
-                
-            }
-        }
+        border: 3px solid rgba(0, 0, 0, 0.16);
         &:hover {
             color: #1B89FC;
 
@@ -110,6 +110,12 @@
         position: relative;
         overflow: hidden;
         @include adaptiv-value("margin-bottom", 70, 30, 1);
+        &_indent {
+            margin: 0;
+            @media(max-width:1270px) {
+                margin: 0;
+            }
+        }
     }
 
     &__slide {
@@ -164,7 +170,7 @@
     }
 
     &__text {
-        @include adaptiv-value("font-size", 32, 18, 1);
+        @include adaptiv-value("font-size", 21, 18, 1);
         line-height: 140%;
         margin-bottom: 25px;
     }
@@ -192,12 +198,17 @@
 
 .operation-banner {
     display: flex;
+    transform: perspective(600px) translate(0px, -150%) rotateX(45deg);
     align-items: center;
     background: #100F00;
     padding: 24px;
     backdrop-filter: blur(12px);
     border-radius: 8px;
+
     justify-content: space-between;
+    &._visible {
+        transform: perspective(600px) translate(0px, 0%) rotateX(0);
+    }
     @media(max-width:492px) {
         display: none;
     }

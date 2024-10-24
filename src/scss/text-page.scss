@@ -22,6 +22,7 @@
         display: flex;  
         align-items: center;
         gap: 4px;
+        font-weight: 600;
     }
 
     &__column {}
@@ -39,20 +40,27 @@
         text-transform: uppercase;
         opacity: 0.4;
         
+        
     }
 
-    &__item {}
+    &__item {
+        overflow: hidden;
+    }
 
     &__main-text {
         font-weight: 700;
+        overflow: hidden;
         line-height: 150%;
+
         @include adaptiv-value("margin-bottom", 32, 24, 1);
+       
     }
 
     &__main-image {
         position: relative;
         padding-bottom: 67.2%;
         border-radius: 5px;
+        
         @include adaptiv-value("margin-bottom", 32, 24, 1);
         img {
             border-radius: 5px;
@@ -74,16 +82,28 @@
 
     &__text {
         line-height: 150%;
+        overflow: hidden;
+        p {
+            transform: translate(-150%,0);
+        }
     }
 
     &__list {
         padding-left: 15px;
         @include adaptiv-value("margin-bottom", 32, 24, 1);
+        
+        overflow: hidden;
+        ol,li {
+            transform: translate(-150%,0);
+        }
+            
+        
     }
 
     &__columns {
         gap: 24px;
         display: flex;
+        flex-direction: column;
         @include adaptiv-value("margin-bottom", 60, 20, 1);
     }
 
@@ -120,7 +140,15 @@
 
     &__sub-heading {
         font-weight: 900;
+        margin-bottom: 16px;
+        
         @include adaptiv-value("font-size",21,18 , 1);
+    }
+
+    &__bottom  {
+        @media(max-width:492px) {
+            margin-bottom: 40px;
+        }
     }
 }
 
@@ -170,6 +198,9 @@
         opacity: 0.64;
         @include adaptiv-value("font-size", 21, 18, 1);
         font-weight: 700;
+        @media(max-width:492px) {
+            flex: 1 1 100%;
+        }
     }
 
     &__icon {

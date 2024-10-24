@@ -1,4 +1,19 @@
+.intro-row {
+    .intro-notice {
+        opacity: 0;
+        transform: perspective(600px) translate(0px, -150%) rotateX(45deg);
+    }
+    &._visible {
+       
+        .intro-notice {
+            opacity: 1;
+            transform: perspective(600px) translate(0, 0) rotateX(0deg);
+        }
+    }
+}
+
 .intro-notice {
+    transition: all 0.8s ease 0s;
     display: flex;
     align-items: center;
     gap: 24px;

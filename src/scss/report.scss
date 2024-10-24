@@ -1,5 +1,8 @@
 .report {
-    @include adaptiv-value("padding-bottom", 280, 200, 1);
+    padding-bottom: 280px;
+    @media(max-width:1270px) {
+        padding-bottom: 250px;
+    }
     &__container {
     }
 
@@ -27,7 +30,9 @@
 
     &__image {
         position: relative;
-        padding-bottom: 50%;
+        padding-bottom: 47%;
+        transition: all 1s ease 0s;
+        transform: translate(0,0);
         img {
             position: absolute;
             width: 100%;

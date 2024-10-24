@@ -1,0 +1,44 @@
+.popup {
+
+    &__body {
+    }
+
+    &__content {
+    }
+}
+.summary {
+
+    &__body {
+    }
+
+    &__content {
+    }
+
+    &__content-body {
+    }
+
+    &__submit {
+        padding: 24px;
+        &:before {
+            display: none;
+        }
+        @media(max-width:492px) {
+            padding: 16px 0px;
+        }
+    }
+}
+
+.form-item {
+    &__file-button {
+        border: 2px dashed #FCE300;
+        opacity: 0.32;
+        font-weight: 400;
+        color: #000;
+        @media(max-width:492px) {
+            font-size: 14px;
+            padding: 10px;
+        }
+    }
+}
+
+

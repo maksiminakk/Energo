@@ -8,9 +8,11 @@
 
     &__top {
         @include adaptiv-value("margin-bottom", 70, 30, 1);
+        overflow: hidden;
     }
 
     &__title {
+        transform: translate(150%,0);
         @media(max-width:492px) {
             br {
                 display: none;
@@ -25,6 +27,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 24px;
+        overflow: hidden;
     }
 
     &__item {
@@ -32,6 +35,41 @@
         color: #fff;
         overflow: hidden;
         border-radius: 8px;
+        transition: all 0.8s ease 0s; 
+        &:nth-child(2) {
+            transition: all 0.8s ease 0.1s;
+        }  
+        &:nth-child(3) {
+            transition: all 0.8s ease 0.2s;
+        }  
+        &:nth-child(4) {
+            transition: all 0.8s ease 0.3s;
+        }  
+        &:nth-child(5) {
+            transition: all 0.8s ease 0.4s;
+        }  
+        &:nth-child(6) {
+            transition: all 0.8s ease 0.5s;
+        }  
+        &:nth-child(7) {
+            transition: all 0.8s ease 0.6s;
+        }  
+        &:nth-child(8) {
+            transition: all 0.8s ease 0.7s;
+        }  
+        &:nth-child(9) {
+            transition: all 0.8s ease 0.8s;
+        }  
+        &:nth-child(10) {
+            transition: all 0.8s ease 0.9s;
+        }  
+
+        &:nth-child(11) {
+            transition: all 0.8s ease 1s;
+        }  
+        &:nth-child(12) {
+            transition: all 0.8s ease 1.1s;
+        }  
         flex: 0 1 calc(25% - 18px);
         @media(max-width:1024px) {
             flex: 0 1 calc(33.333% - 18px);

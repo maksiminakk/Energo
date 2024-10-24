@@ -38,6 +38,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
+    <link rel=" stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -51,7 +52,18 @@
                 <div class="header-top__row">
                     <div class="header-top__item">
                         <a href="/index.html" class="header-top__logo">
-                            <img src="img/logo.svg" alt="">
+                            <svg width="105" height="47" viewBox="0 0 105 47" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="105" height="47" fill="url(#pattern0)" />
+                                <defs>
+                                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0_7_3"
+                                            transform="translate(-0.00357143) scale(0.00302445 0.00675676)" />
+                                    </pattern>
+                                    <image id="image0_7_3" width="333" height="148"
+                                        xlink:href="data:image/png;base64,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" />
+                                </defs>
+                            </svg>
                         </a>
                     </div>
                     <div class="header-top__item">
@@ -83,14 +95,15 @@
                                         </g>
                                         <defs>
                                             <clipPath id="clip0_7_10">
-                                                <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                                                <rect width="24" height="24" fill="white"
+                                                    transform="translate(0 0.5)" />
                                             </clipPath>
                                         </defs>
                                     </svg>
                                     <span class="header-top__phone">
                                         +7 499 113-06-21
                                     </span>
-                                    
+
                                     <div class="header-top__time">
                                         Пн-Пт 8:00-18:00
                                     </div>
@@ -109,7 +122,7 @@
         <div class="header-bottom__container container">
             <div class="header-bottom__body">
                 <nav class="header-bottom__nav">
-                    
+
                     <ul data-spollers="1024" class="header-bottom__list">
                         <li>
                             <a href="" class="header-bottom__link link">
@@ -212,7 +225,7 @@
                             <span class="header-top__phone">
                                 +7 499 113-06-21
                             </span>
-                            
+
                             <div class="header-top__time">
                                 Пн-Пт 8:00-18:00
                             </div>
@@ -235,9 +248,9 @@
                                 </svg>
                             </a>
                         </div>
-                        
-                        
-                        
+
+
+
                     </div>
                 </nav>
             </div>
@@ -248,35 +261,35 @@
             <section class="intro ">
     <div class="intro__container container">
         <div class="intro__body">
-            <div class="intro__content">
+            <div class="intro__content _anim-items">
                 <div class="intro__item">
-                    <h1 class="intro__heading heading">
+                    <h1 class="intro__heading heading  _anim-show">
                         Профессиональная команда <br>
                         <span class="heading__main">ЭНЕРГЕТИКОВ</span>
                     </h1>
                 </div>
                 <div class="intro__item">
-                    <h2 class="intro__label label">
+                    <h2 class="intro__label label _anim-show">
                         со стажем более <span>12 лет</span>
                     </h2>
                 </div>
                 <div class="intro__item">
-                    <div class="intro__text text">
+                    <div class="intro__text text _anim-show">
                         <p>
                             Выполним любые электромонтажные работы <br> качественно, по договору и в установленный срок
                         </p>
                     </div>
                 </div>
-                <div class="intro__item">
-                    <a href="" class="intro__button button">
+                <div class="intro__item _anim-show">
+                    <a href="#modal-consultation" class=" popup-link intro__button button">
                         Получить консультацию
                     </a>
                 </div>
             </div>
             <div class="intro__row intro-row">
 
-                <div class="intro-row__row">
-                    <div class="intro-row__item">
+                <div class="intro-row__row _anim-items _anim-no-hide">
+                    <div class="intro-row__item _anim-show">
                         <div class="intro-row__top">
                             <div class="intro-row__icon">
                                 <img src="img/icons/key.png" alt="">
@@ -294,7 +307,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="intro-row__item">
+                    <div class="intro-row__item _anim-show">
                         <div class="intro-row__top">
                             <div class="intro-row__icon">
                                 <img src="img/icons/shield.png" alt="">
@@ -311,7 +324,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="intro-row__item">
+                    <div class="intro-row__item _anim-show">
                         <div class="intro-row__top">
                             <div class="intro-row__icon">
                                 <img src="img/icons/docs.png" alt="">
@@ -328,7 +341,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="intro-row__item">
+                    <div class="intro-row__item _anim-show">
                         <div class="intro-row__top">
                             <div class="intro-row__icon">
                                 <img src="img/icons/team.png" alt="">
@@ -352,7 +365,12 @@
             </div>
         </div>
     </div>
+    <div class="intro__bg"> 
 
+    </div>
+    <div class="intro__video-bg">
+        <video autoplay loop muted src="video/intro.mp4"></video>
+    </div>
 </section>
             <section class="services">
 
@@ -366,15 +384,15 @@
             </h2>
         </div>
         <div class="services__content">
-            <div data-spollers="600" class="services__row">
-                <div class="services__item">
+            <div data-spollers="600" data-one-spoller class="services__row _anim-items _anim-no-hide">
+                <div class="services__item  ">
 
                     <div class="services__item-body">
                         <div class="services__sublabel">
                             Увеличить <br>
                             мощность
                         </div>
-                        <div data-spoller class="services__slide-toggle">
+                        <div data-spoller class="services__slide-toggle _active">
 
                         </div>
                         <div class="services__item-content">
@@ -384,19 +402,22 @@
                                     для физлиц и юрлиц в Москве и области
                                 </p>
                             </div>
-                            <a href="/https:" class="services__button button">
-                                Подробнее
-                            </a>
+                            <div class="services__bottom">
+                                <a href="/https:" class="services__button button">
+                                    Подробнее
+                                </a>
+                            </div>
+                            
                         </div>
                     </div>
 
-                    <div class="services__image" style="background-image: url(../img/services/01.jpg);">
+                    <div class="services__image _anim-show" style="background-image: url(../img/services/01.jpg);">
                     </div>
                     <div class="services__mask">
                         <!-- Технический класс -->
                     </div>
                 </div>
-                <div class="services__item">
+                <div class="services__item ">
 
                     <div class="services__item-body">
                         <div class="services__sublabel">
@@ -413,19 +434,21 @@
                                     для физлиц и юрлиц в Москве и области
                                 </p>
                             </div>
-                            <a href="" class="services__button button">
-                                Подробнее
-                            </a>
+                            <div class="services__bottom">
+                                <a href="/https:" class="services__button button">
+                                    Подробнее
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="services__image" style="background-image: url(../img/services/02.jpg);">
+                    <div class="services__image _anim-show" style="background-image: url(../img/services/02.jpg);">
                     </div>
                     <div class="services__mask">
                         <!-- Технический класс -->
                     </div>
                 </div>
-                <div class="services__item">
+                <div class="services__item ">
 
                     <div class="services__item-body">
                         <div class="services__sublabel">
@@ -441,19 +464,21 @@
                                     для физлиц и юрлиц в Москве и области
                                 </p>
                             </div>
-                            <a href="" class="services__button button">
-                                Подробнее
-                            </a>
+                            <div class="services__bottom">
+                                <a href="/https:" class="services__button button">
+                                    Подробнее
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="services__image" style="background-image: url(../img/services/03.jpg);">
+                    <div class="services__image _anim-show" style="background-image: url(../img/services/03.jpg);">
                     </div>
                     <div class="services__mask">
                         <!-- Технический класс -->
                     </div>
                 </div>
-                <div class="services__item">
+                <div class="services__item ">
 
                     <div class="services__item-body">
                         <div class="services__sublabel">
@@ -469,19 +494,21 @@
                                     для физлиц и юрлиц в Москве и области
                                 </p>
                             </div>
-                            <a href="" class="services__button button">
-                                Подробнее
-                            </a>
+                            <div class="services__bottom">
+                                <a href="/https:" class="services__button button">
+                                    Подробнее
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="services__image" style="background-image: url(../img/services/04.jpg);">
+                    <div class="services__image _anim-show" style="background-image: url(../img/services/04.jpg);">
                     </div>
                     <div class="services__mask">
                         <!-- Технический класс -->
                     </div>
                 </div>
-                <div class="services__item">
+                <div class="services__item ">
 
                     <div class="services__item-body">
                         <div class="services__sublabel">
@@ -497,19 +524,21 @@
                                     для физлиц и юрлиц в Москве и области
                                 </p>
                             </div>
-                            <a href="" class="services__button button">
-                                Подробнее
-                            </a>
+                            <div class="services__bottom">
+                                <a href="/https:" class="services__button button">
+                                    Подробнее
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="services__image" style="background-image: url(../img/services/05.jpg);">
+                    <div class="services__image _anim-show" style="background-image: url(../img/services/05.jpg);">
                     </div>
                     <div class="services__mask">
                         <!-- Технический класс -->
                     </div>
                 </div>
-                <div class="services__item">
+                <div class="services__item ">
 
                     <div class="services__item-body">
                         <div class="services__sublabel">
@@ -525,13 +554,15 @@
                                     для физлиц и юрлиц в Москве и области
                                 </p>
                             </div>
-                            <a href="" class="services__button button">
-                                Подробнее
-                            </a>
+                            <div class="services__bottom">
+                                <a href="/https:" class="services__button button">
+                                    Подробнее
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="services__image" style="background-image: url(../img/services/06.jpg);">
+                    <div class="services__image _anim-show" style="background-image: url(../img/services/06.jpg);">
                     </div>
                     <div class="services__mask">
                         <!-- Технический класс -->
@@ -560,8 +591,8 @@
                     </div>
                 </div>
                 <div class="object-type__items">
-                    <div class="object-type__row">
-                        <div class="object-type__item">
+                    <div class="object-type__row _anim-items ">
+                        <div class="object-type__item _anim-show">
                             <div class="object-type__icon icon-image">
                                 <img src="img/object-type/garage.png" alt="">
                             </div>
@@ -570,7 +601,7 @@
                             </div>
                             
                         </div>
-                        <div class="object-type__item">
+                        <div class="object-type__item _anim-show">
                             <div class="object-type__icon icon-image">
                                 <img src="img/object-type/pc.png" alt="">
                             </div>
@@ -579,7 +610,7 @@
                             </div>
                             
                         </div>
-                        <div class="object-type__item">
+                        <div class="object-type__item _anim-show">
                             <div class="object-type__icon icon-image">
                                 <img src="img/object-type/garden.png" alt="">
                             </div>
@@ -588,7 +619,7 @@
                             </div>
                             
                         </div>
-                        <div class="object-type__item">
+                        <div class="object-type__item _anim-show">
                             <div class="object-type__icon icon-image">
                                 <img src="img/object-type/house.png" alt="">
                             </div>  
@@ -597,7 +628,7 @@
                             </div>
                             
                         </div>
-                        <div class="object-type__item">
+                        <div class="object-type__item _anim-show">
                             <div class="object-type__icon icon-image">
                                 <img src="img/object-type/rest.png" alt="">
                             </div>
@@ -606,7 +637,7 @@
                             </div>
                             
                         </div>
-                        <div class="object-type__item">
+                        <div class="object-type__item _anim-show">
                             <div class="object-type__icon icon-image">
                                 <img src="img/object-type/flower-shop.png" alt="">
                             </div>
@@ -615,7 +646,7 @@
                             </div>
                             
                         </div>
-                        <div class="object-type__item">
+                        <div class="object-type__item _anim-show">
                             <div class="object-type__icon icon-image">
                                 <img src="img/object-type/object.png" alt="">
                             </div>
@@ -624,7 +655,7 @@
                             </div>
                             
                         </div>
-                        <div class="object-type__item">
+                        <div class="object-type__item _anim-show">
                             <div class="object-type__icon icon-image">
                                 <img src="img/object-type/city.png" alt="">
                             </div>
@@ -644,8 +675,8 @@
 </section>
             <section class="about-section">
     <div class="about-section__container container">
-        <div class="about-section__body">
-            <div class="about-section__top section-top">
+        <div class="about-section__body _anim-items _anim-no-hide">
+            <div class="about-section__top section-top _anim-show">
                 <h3 class="about-section__label text text-label">
                     О компании
                 </h3>
@@ -657,7 +688,7 @@
             <div class="about-section__content">
                 <div class="about-section__item">
                     <div class="about-section__text sub-text">
-                        <p>
+                        <p class="_anim-show"> 
                             В нашей компании мы обходимся без посредников, выполняя и контролируя весь комплекс работ от начала до конца. Имея в штате юридических и технических специалистов, собственный цех и бригаду монтажников, мы можем влиять на сроки и стоимость работ электросетей, на решение по согласованию от УК и успешно сдавать объект инспектору.
                         </p>
                     </div>
@@ -665,24 +696,24 @@
                 <div class="about-section__item">
                     <div class="about-section__row">
                         <div class="about-section__point">
-                            <div class="about-section__number number">
-                                12
+                            <div data-to="12" data-stop="0" class="about-section__number number _counter">
+                                0
                             </div>
                             <div class="about-section__sublabel sublabel">
                                 Опыт более 12 лет
                             </div>
                         </div>
-                        <div class="about-section__point">
-                            <div class="about-section__number number">
-                                125
+                        <div  class="about-section__point">
+                            <div data-to="125" data-stop="0" class="about-section__number number _counter">
+                                0
                             </div>
                             <div class="about-section__sublabel sublabel">
                                 Реализованных объектов
                             </div>
                         </div>
                         <div class="about-section__point">
-                            <div class="about-section__number number">
-                                513
+                            <div data-to="513" data-stop="0" class="about-section__number number _counter">
+                                0
                             </div>
                             <div class="about-section__sublabel sublabel">
                                 Согласованных документов
@@ -700,8 +731,8 @@
         </div>
     </div>
     <div class="about-section__panel container icon-panel">
-        <div class="icon-panel__row">
-            <div class="icon-panel__item">
+        <div class="icon-panel__row _anim-items _anim-no-hide">
+            <div class="icon-panel__item _anim-show">
                 <div class="icon-panel__icon icon-image">
                     <img src="img/icon-panel/location.png" alt="">
                 </div>
@@ -711,7 +742,7 @@
                     </p>
                 </div>
             </div>
-            <div class="icon-panel__item">
+            <div class="icon-panel__item _anim-show">
                 <div class="icon-panel__icon icon-image">
                     <img src="img/icon-panel/team-production.png" alt="">
                 </div>
@@ -721,7 +752,7 @@
                     </p>
                 </div>
             </div>
-            <div class="icon-panel__item">
+            <div class="icon-panel__item _anim-show">
                 <div class="icon-panel__icon icon-image">
                     <img src="img/icon-panel/electricity.png" alt="">
                 </div>
@@ -731,7 +762,7 @@
                     </p>
                 </div>
             </div>
-            <div class="icon-panel__item">
+            <div class="icon-panel__item _anim-show">
                 <div class="icon-panel__icon icon-image">
                     <img src="img/icon-panel/team-star.png" alt="">
                 </div>
@@ -744,7 +775,7 @@
         </div>
     </div>
 </section>
-            <section class="projects">
+            <section class="projects tab-section">
     <div class="projects__container container">
         <div class="projects__body">
             <div class="projects__top section-top">
@@ -777,8 +808,588 @@
             </div>
         </div>
     </div>
-    <div class="projects__content"> 
-        <div data-spollers="767" class="projects__row tab__slide _active">
+    <div class="projects__content _anim-items _anim-no-hide"> 
+        <!-- <div data-spollers="767" class="projects__row tab__slide _active">
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза 
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали. Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        От 15кВ до 50кВ
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show"  >
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное 
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show _active">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div data-spoller class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное 
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show _active">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/02.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div data-spoller class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали. Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div  class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show ">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show _active">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/03.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div data-spoller class="projects-item__title">  
+                        От 15кВ до 50кВ
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show _active">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/04.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div data-spoller class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show _active">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/05.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div data-spoller class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали. Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show _active">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/06.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div data-spoller class="projects-item__title">  
+                        От 15кВ до 50кВ
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show _active">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/07.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div data-spoller class="projects-item__title">  
+                        От 15кВ до 50кВ
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show _active">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/08.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div data-spoller class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div  class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали. Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="" class="projects__item projects-item _anim-show">
+                <div class="projects-item__image">
+                    <img class="ibg" src="img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects-item__content">
+                    <div class="projects-item__title">  
+                        Увеличение мощности в магазине Ярче
+                    </div>
+                    <div class="projects-item__text">
+                        <p>
+                            Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
+                        </p>
+                    </div>
+                </div>
+                
+            </a>
+            
+
+            
+        </div> -->
+        <div class="projects__row tab__slide _active">
             <a href="" class="projects__item projects-item">
                 <div class="projects-item__image">
                     <img class="ibg" src="img/projects/01.jpg" alt="">
@@ -911,7 +1522,7 @@
                     <img class="ibg" src="img/projects/01.jpg" alt="">
                 </div>
                 <div class="projects-item__content">
-                    <div data-spoller class="projects-item__title">  
+                    <div class="projects-item__title">  
                         Увеличение мощности в магазине Ярче
                     </div>
                     <div class="projects-item__text">
@@ -927,7 +1538,7 @@
                     <img class="ibg" src="img/projects/02.jpg" alt="">
                 </div>
                 <div class="projects-item__content">
-                    <div data-spoller class="projects-item__title">  
+                    <div class="projects-item__title">  
                         Увеличение мощности в магазине Ярче
                     </div>
                     <div class="projects-item__text">
@@ -943,7 +1554,7 @@
                     <img class="ibg" src="img/projects/01.jpg" alt="">
                 </div>
                 <div class="projects-item__content">
-                    <div  class="projects-item__title">  
+                    <div class="projects-item__title">  
                         Увеличение мощности в магазине Ярче
                     </div>
                     <div class="projects-item__text">
@@ -975,7 +1586,7 @@
                     <img class="ibg" src="img/projects/03.jpg" alt="">
                 </div>
                 <div class="projects-item__content">
-                    <div data-spoller class="projects-item__title">  
+                    <div class="projects-item__title">  
                         От 15кВ до 50кВ
                     </div>
                     <div class="projects-item__text">
@@ -991,7 +1602,7 @@
                     <img class="ibg" src="img/projects/04.jpg" alt="">
                 </div>
                 <div class="projects-item__content">
-                    <div data-spoller class="projects-item__title">  
+                    <div class="projects-item__title">  
                         Увеличение мощности в магазине Ярче
                     </div>
                     <div class="projects-item__text">
@@ -1039,7 +1650,7 @@
                     <img class="ibg" src="img/projects/05.jpg" alt="">
                 </div>
                 <div class="projects-item__content">
-                    <div data-spoller class="projects-item__title">  
+                    <div class="projects-item__title">  
                         Увеличение мощности в магазине Ярче
                     </div>
                     <div class="projects-item__text">
@@ -1055,7 +1666,7 @@
                     <img class="ibg" src="img/projects/06.jpg" alt="">
                 </div>
                 <div class="projects-item__content">
-                    <div data-spoller class="projects-item__title">  
+                    <div class="projects-item__title">  
                         От 15кВ до 50кВ
                     </div>
                     <div class="projects-item__text">
@@ -1103,7 +1714,7 @@
                     <img class="ibg" src="img/projects/07.jpg" alt="">
                 </div>
                 <div class="projects-item__content">
-                    <div data-spoller class="projects-item__title">  
+                    <div class="projects-item__title">  
                         От 15кВ до 50кВ
                     </div>
                     <div class="projects-item__text">
@@ -1119,10 +1730,10 @@
                     <img class="ibg" src="img/projects/08.jpg" alt="">
                 </div>
                 <div class="projects-item__content">
-                    <div data-spoller class="projects-item__title">  
+                    <div class="projects-item__title">  
                         Увеличение мощности в магазине Ярче
                     </div>
-                    <div  class="projects-item__text">
+                    <div class="projects-item__text">
                         <p>
                             Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали. Здание в Москве на улице Бестужевых имело опосредованное присоединение на 15 кВт через автостоянку. Собственник 3 раза пытался увеличить мощность, но каждый раз ему отказывали
                         </p>
@@ -4280,24 +4891,24 @@
             <div class="certificates__row swiper">
                 <div class="certificates__wrapper swiper-wrapper">
                     <div class="certificates__item swiper-slide">
-                        <div class="certificates__image">
+                        <a href="img/certificates/01.jpg" data-fancybox="gallery" class="certificates__image">
                             <img class="ibg" src="img/certificates/01.jpg" alt="">
-                        </div>
+                        </a>
                     </div>
                     <div class="certificates__item swiper-slide">
-                        <div class="certificates__image">
+                        <a href="img/certificates/02.jpg" data-fancybox="gallery" class="certificates__image">
                             <img class="ibg" src="img/certificates/02.jpg" alt="">
-                        </div>
+                        </a>
                     </div>
                     <div class="certificates__item swiper-slide">
-                        <div class="certificates__image">
+                        <a href="img/certificates/03.jpg" data-fancybox="gallery" class="certificates__image">
                             <img class="ibg" src="img/certificates/03.jpg" alt="">
-                        </div>
+                        </a>
                     </div>
                     <div class="certificates__item swiper-slide">
-                        <div class="certificates__image">
+                        <a href="img/certificates/04.jpg" data-fancybox="gallery" class="certificates__image">
                             <img class="ibg" src="img/certificates/04.jpg" alt="">
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -4307,8 +4918,8 @@
             <section class="reviews">
     <div class="reviews__container container">
         <div class="reviews__body">
-            <div class="reviews__top">
-                <div class="reviews__left">
+            <div class="reviews__top _anim-items">
+                <div class="reviews__left _anim-show">
                     <div class="reviews__label text-label">
                         Отзывы
                     </div>
@@ -4316,7 +4927,7 @@
                         Убедились в качестве
                     </h2>
                 </div>
-                <div class="reviews__right">
+                <div class="reviews__right _anim-show">
                     <a href="#" class="reviews__button sub-button">
                         Все отзывы
                     </a>
@@ -4324,9 +4935,9 @@
             </div>
             <div class="reviews__content">
                 <div class="reviews__row swiper">
-                    <div class="reviews__wrapper swiper-wrapper">
-                        <div class="reviews__slide swiper-slide">
-                            <div class="reviews-item reviews__item">
+                    <div class="reviews__wrapper swiper-wrapper _anim-items _anim-no-hide">
+                        <div class="reviews__slide swiper-slide ">
+                            <div class="reviews-item reviews__item _anim-show">
                                 <div class="reviews-item__title">
                                     Иванов Иван Иванович
                                 </div>
@@ -4338,13 +4949,13 @@
                                         Значимость этих проблем настолько очевидна, что укрепление и развитие структуры
                                         позволяет выполнять важные задания по разработке модели развития. Равным образом
                                         постоянное информационно-пропагандистское обеспечение нашей деятельности <br>
-                                        <a href="" class="reviews-item__link">
+                                        <a href="#modal-message" class="reviews-item__link popup-link">
                                             Читать полностью
                                         </a>
                                         
                                     </p>
                                 </div>
-                                <a href="" class="reviews-item__main-link">
+                                <a data-fancybox="gallery" href="img/certificates/01.jpg" class="reviews-item__main-link">
                                     Благодарственное письмо
                                 </a>
                                 <div class="reviews-item__date">
@@ -4355,8 +4966,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="reviews__slide swiper-slide">
-                            <div class="reviews-item reviews__item">
+                        <div class="reviews__slide swiper-slide ">
+                            <div class="reviews-item reviews__item _anim-show">
                                 <div class="reviews-item__title">
                                     Иванов Иван Иванович
                                 </div>
@@ -4368,13 +4979,13 @@
                                         Значимость этих проблем настолько очевидна, что укрепление и развитие структуры
                                         позволяет выполнять важные задания по разработке модели развития. Равным образом
                                         постоянное информационно-пропагандистское обеспечение нашей деятельности <br>
-                                        <a href="" class="reviews-item__link">
+                                        <a href="#modal-message" class="reviews-item__link popup-link">
                                             Читать полностью
                                         </a>
                                         
                                     </p>
                                 </div>
-                                <a href="" class="reviews-item__main-link">
+                                <a data-fancybox="gallery" href="img/certificates/02.jpg" class="reviews-item__main-link">
                                     Благодарственное письмо
                                 </a>
                                 <div class="reviews-item__date">
@@ -4386,7 +4997,7 @@
                             </div>
                         </div>
                         <div class="reviews__slide swiper-slide">
-                            <div class="reviews-item reviews__item">
+                            <div class="reviews-item reviews__item _anim-show">
                                 <div class="reviews-item__title">
                                     Иванов Иван Иванович
                                 </div>
@@ -4398,13 +5009,13 @@
                                         Значимость этих проблем настолько очевидна, что укрепление и развитие структуры
                                         позволяет выполнять важные задания по разработке модели развития. Равным образом
                                         постоянное информационно-пропагандистское обеспечение нашей деятельности <br>
-                                        <a href="" class="reviews-item__link">
+                                        <a href="#modal-message" class="reviews-item__link popup-link">
                                             Читать полностью
                                         </a>
                                         
                                     </p>
                                 </div>
-                                <a href="" class="reviews-item__main-link">
+                                <a data-fancybox="gallery" href="img/certificates/03.jpg" class="reviews-item__main-link">
                                     Благодарственное письмо
                                 </a>
                                 <div class="reviews-item__date">
@@ -4415,8 +5026,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="reviews__slide swiper-slide">
-                            <div class="reviews-item reviews__item">
+                        <div class="reviews__slide swiper-slide ">
+                            <div class="reviews-item reviews__item _anim-show">
                                 <div class="reviews-item__title">
                                     Иванов Иван Иванович
                                 </div>
@@ -4428,13 +5039,13 @@
                                         Значимость этих проблем настолько очевидна, что укрепление и развитие структуры
                                         позволяет выполнять важные задания по разработке модели развития. Равным образом
                                         постоянное информационно-пропагандистское обеспечение нашей деятельности <br>
-                                        <a href="" class="reviews-item__link">
+                                        <a href="#modal-message" class="reviews-item__link popup-link">
                                             Читать полностью
                                         </a>
                                         
                                     </p>
                                 </div>
-                                <a href="" class="reviews-item__main-link">
+                                <a data-fancybox="gallery" href="img/certificates/04.jpg" class="reviews-item__main-link">
                                     Благодарственное письмо
                                 </a>
                                 <div class="reviews-item__date">
@@ -4448,108 +5059,113 @@
                     </div>
                 </div>
             </div>
+            <div class="reviews__bottom">
+                <a href="#" class="reviews__button sub-button">
+                    Все отзывы
+                </a>
+            </div>
         </div>
     </div>
 </section>
             <section class="partners">
     <div class="partners__container container">
         <div class="partners__body">
-            <div class="partners__top section-top">
-                <h3 class="partners__label text text-label">
+            <div class="partners__top  section-top _anim-items">
+                <h3 class="partners__label text text-label _anim-show">
                     Партнеры и клиенты
                 </h3>
-                <h2 class="partners__title title">
+                <h2 class="partners__title title _anim-show">
                     Нам доверяют
                 </h2>
             </div>
             <div class="partners__content">
-                <div class="partners__row">
-                    <a href="" class="partners__item">
+                <div class="partners__row _anim-items _anim-no-hide">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/01.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/02.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/03.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/04.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/05.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/06.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/07.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/08.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/09.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/10.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/11.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/12.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/13.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/14.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show" >
                         <div class="partners__image">
                             <img src="img/parthers/15.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/16.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/17.png" alt="">
                         </div>
                     </a>
-                    <a href="" class="partners__item">
+                    <a href="" class="partners__item _anim-show">
                         <div class="partners__image">
                             <img src="img/parthers/18.png" alt="">
                         </div>
@@ -4563,8 +5179,8 @@
     <div class="questions__container container">
         <div class="questions__body">
             <div class="questions__row">
-                <div class="questions__row-item">
-                    <div class="questions__top section-top">
+                <div class="questions__row-item _anim-items">
+                    <div class="questions__top section-top _anim-show">
                         <h3 class="questions__label text text-label">
                             Вопрос-ответ
                         </h3>
@@ -4575,8 +5191,8 @@
                     </div>
                 </div>
                 <div class="questions__row-item">
-                    <div class="questions__net" data-spollers>
-                        <div class="questions__item questions-item" >
+                    <div class="questions__net _anim-items _anim-no-hide" data-one-spoller  data-spollers>
+                        <div class="questions__item questions-item _anim-show" >
                             <button data-spoller class="questions-item__button">
                                 Наименование вопроса Значимость этих проблем настолько очевидна, что укрепление и развитие 
                             </button>
@@ -4588,7 +5204,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="questions__item questions-item" >
+                        <div class="questions__item questions-item _anim-show" >
                             <button data-spoller class="questions-item__button">
                                 Наименование вопроса Значимость этих проблем настолько очевидна, что укрепление и развитие 
                             </button>
@@ -4600,7 +5216,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="questions__item questions-item" >
+                        <div class="questions__item questions-item _anim-show" >
                             <button data-spoller class="questions-item__button">
                                 Наименование вопроса Значимость этих проблем настолько очевидна, что укрепление и развитие 
                             </button>
@@ -4612,7 +5228,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="questions__item questions-item" >
+                        <div class="questions__item questions-item _anim-show" >
                             <button data-spoller class="questions-item__button">
                                 Наименование вопроса Значимость этих проблем настолько очевидна, что укрепление и развитие 
                             </button>
@@ -4624,7 +5240,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="questions__item questions-item" >
+                        <div class="questions__item questions-item _anim-show" >
                             <button data-spoller class="questions-item__button">
                                 Наименование вопроса Значимость этих проблем настолько очевидна, что укрепление и развитие 
                             </button>
@@ -4638,12 +5254,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="questions__row-item">
-                    <div class="questions__buttons">
-                        <a href="" class="questions__button button button_default">
+                <div class="questions__row-item _anim-items">
+                    <div class="questions__buttons _anim-show">
+                        <a href="#modal-consultation-2" class="questions__button popup-link button button_default ">
                             Задать вопрос
                         </a>
-                        <a href="" class="questions__button sub-button ">
+                        <a href="" class="questions__button sub-button">
                             Все вопросы
                         </a>
                     </div>
@@ -4665,11 +5281,11 @@
             <section class="map">
     <div class="map__container container">
         <div class="map__body">
-            <div class="map__top">
-                <h2 class="map__title title">
+            <div class="map__top _anim-items">
+                <h2 class="map__title title _anim-show">
                     Карта объектов
                 </h2>
-                <div class="map__right">
+                <div class="map__right _anim-show">
                     <div class="map__label">
                         Фильтр по типу услуги
                     </div>
@@ -4745,14 +5361,14 @@
                 <div class="blog__column">
                     
                     <div class="blog__content">
-                        <div class="blog__top">
-                            <h2 class="blog__title title">
+                        <div class="blog__top _anim-items">
+                            <h2 class="blog__title title _anim-show">
                                 Блог
                             </h2>
                         </div>
                         <div class="blog__row-body">
-                            <div class="blog__row">
-                                <a href="" class="blog__item blog-item blog-hover-item">
+                            <div class="blog__row _anim-items _anim-no-hide">
+                                <a href="" class="blog__item blog-item blog-hover-item _anim-show">
                                     <div class="blog-item__image">
                                         <img class="ibg" src="img/blog/01.jpg" alt="">
                                     </div>
@@ -4765,7 +5381,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" class="blog__item blog-item blog-hover-item">
+                                <a href="" class="blog__item blog-item blog-hover-item _anim-show">
                                     <div class="blog-item__image">
                                         <img class="ibg" src="img/blog/02.jpg" alt="">
                                     </div>
@@ -4778,7 +5394,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" class="blog__item blog-item blog-hover-item">
+                                <a href="" class="blog__item blog-item blog-hover-item _anim-show">
                                     <div class="blog-item__image">
                                         <img class="ibg" src="img/blog/01.jpg" alt="">
                                     </div>
@@ -4791,7 +5407,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" class="blog__item blog-item blog-hover-item"  >
+                                <a href="" class="blog__item blog-item blog-hover-item _anim-show"  >
                                     <div class="blog-item__image">
                                         <img class="ibg" src="img/blog/02.jpg" alt="">
                                     </div>
@@ -4816,13 +5432,13 @@
                 </div>
                 <div class="blog__column">
                     <div class="blog__content">
-                        <div class="blog__top">
-                            <h2 class="blog__title title">
+                        <div class="blog__top _anim-items" >
+                            <h2 class="blog__title title _anim-show">
                                 Новости
                             </h2>
                         </div>
-                        <div class="blog__aside blog-aside">
-                            <a href="" class="blog-aside__item blog-hover-item">
+                        <div class="blog__aside blog-aside _anim-items _anim-no-hide">
+                            <a href="" class="blog-aside__item blog-hover-item _anim-show">
                                 <div class="blog-item__content">
                                     <div class="blog-item__label text">
                                         Группа «Эталон» приобретает российское подразделение «ЮИТ»
@@ -4832,7 +5448,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="" class="blog-aside__item blog-hover-item">
+                            <a href="" class="blog-aside__item blog-hover-item _anim-show">
                                 <div class="blog-item__content">
                                     <div class="blog-item__label text">
                                         Группа «Эталон» приобретает российское подразделение «ЮИТ»
@@ -4842,7 +5458,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="" class="blog-aside__item blog-hover-item">
+                            <a href="" class="blog-aside__item blog-hover-item _anim-show">
                                 <div class="blog-item__content">
                                     <div class="blog-item__label text">
                                         Группа «Эталон» приобретает российское подразделение «ЮИТ»
@@ -4852,7 +5468,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="" class="blog-aside__item blog-hover-item">
+                            <a href="" class="blog-aside__item blog-hover-item _anim-show">
                                 <div class="blog-item__content">
                                     <div class="blog-item__label text">
                                         Группа «Эталон» приобретает российское подразделение «ЮИТ»
@@ -4862,7 +5478,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="" class="blog-aside__item blog-hover-item">
+                            <a href="" class="blog-aside__item blog-hover-item _anim-show">
                                 <div class="blog-item__content">
                                     <div class="blog-item__label text">
                                         Группа «Эталон» приобретает российское подразделение «ЮИТ»
@@ -4872,7 +5488,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="" class="blog-aside__item blog-hover-item">
+                            <a href="" class="blog-aside__item blog-hover-item _anim-show">
                                 <div class="blog-item__content">
                                     <div class="blog-item__label text">
                                         Группа «Эталон» приобретает российское подразделение «ЮИТ»
@@ -4897,12 +5513,12 @@
 </section>
             <section class="feedback">
     <div class="feedback__bg">
-        <img src="img/feedback/bg.jpg" alt="">
+        <img src="img/feedback/bg.jpg" alt="bg">
     </div>
     <div class="feedback__container container">
         <div class="feedback__body">
-            <div class="feedback__columns">
-                <div class="feedback__column">
+            <div class="feedback__columns _anim-items _anim-no-hide">
+                <div class="feedback__column _anim-show">
                     <div class="feedback__item">
                         <h2 class="feedback__title title">
                             Давайте обсудим ваш объект
@@ -4940,7 +5556,7 @@
                 </div>
                 <div class="feedback__column">
                     <div class="feedback__row">
-                        <div class="feedback__point feedback-item">
+                        <div class="feedback__point feedback-item _anim-show">
                             <div class="feedback-item__left">
                                 <div class="feedback-item__icon">
                                     <img src="img/feedback/google-docs.png" alt="">
@@ -4957,7 +5573,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="feedback__point feedback-item">
+                        <div class="feedback__point feedback-item _anim-show">
                             <div class="feedback-item__left">
                                 <div class="feedback-item__icon">
                                     <img src="img/feedback/wallet.png" alt="">
@@ -4969,12 +5585,12 @@
                                 </div>
                                 <div class="feedback-item__text">
                                     <p>
-                                        ЗПринимаем оплату на расчетный счет, платим НДС.
+                                        Принимаем оплату на расчетный счет, платим НДС.
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="feedback__point feedback-item">
+                        <div class="feedback__point feedback-item _anim-show">
                             <div class="feedback-item__left">
                                 <div class="feedback-item__icon">
                                     <img src="img/feedback/delivery.png" alt="">
@@ -4991,7 +5607,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="feedback__point feedback-item">
+                        <div class="feedback__point feedback-item _anim-show">
                             <div class="feedback-item__left">
                                 <div class="feedback-item__icon">
                                     <img src="img/feedback/man.png" alt="">
@@ -5008,7 +5624,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="feedback__point feedback-item">
+                        <div class="feedback__point feedback-item _anim-show">
                             <div class="feedback-item__left">
                                 <div class="feedback-item__icon">
                                     <img src="img/feedback/map.png" alt="">
@@ -5025,7 +5641,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="feedback__point feedback-item">
+                        <div class="feedback__point feedback-item _anim-show">
                             <div class="feedback-item__left">
                                 <div class="feedback-item__icon">
                                     <img src="img/feedback/tool.png" alt="">
@@ -5048,12 +5664,13 @@
         </div>
     </div>
 </section>
+            
         </main>
         <footer class="footer">
     <div class="footer__container container">
         <div class="footer__body">
-            <div class="footer__columns">
-                <div class="footer__column">
+            <div class="footer__columns _anim-items">
+                <div class="footer__column ">
                     <div class="footer__items">
                         <div class="footer__item">
                             <a href="/index.html" class="footer__logo">
@@ -5089,135 +5706,118 @@
                 </div>
                 <div class="footer__column">
                     <nav class="footer__row footer-row">
-                        <div class="footer-row__column">
-                            <ul class="footer-row__list">
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Услуги
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Увеличение мощности
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Технологическое присоединение
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Переоформление мощности
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Электромонтажные работы
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Проектирование
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Консалтинг
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="footer-row__column">
-
-                            <ul class="footer-row__list">
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        О компании
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Гарантии
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        СМИ о нас
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        СРО, лицензии
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        FAQ
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Вакансии
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Новости
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Блог
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Полезное
-                                    </a>
-                                </li>
-                            </ul>
-
-                        </div>
-                        <div class="footer-row__column">
-
-                            <ul class="footer-row__list">
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Цены
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Отзывы
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Выполненные работы
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Партнерам
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="footer-row__link">
-                                        Контакты
-                                    </a>
-                                </li>
-                            </ul>
-
-                        </div>
+                        <ul class="footer-row__list">
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Услуги
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    О компании
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Цены
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Увеличение мощности
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Гарантии
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Отзывы
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Технологическое присоединение
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    СМИ о нас
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Выполненные работы
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Переоформление мощности
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    СРО, лицензии
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Партнерам
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Электромонтажные работы
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    FAQ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Проектирование
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Вакансии
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Консалтинг
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Новости
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Блог
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-row__link">
+                                    Полезное
+                                </a>
+                            </li>
+                        </ul>
                     </nav>
                 </div>
             </div>
-            <div class="footer__bottom footer-bottom">
-                <div class="footer-bottom__columns">
+            <div class="footer__bottom footer-bottom _anim-items">
+                <div class="footer-bottom__columns _anim-show">
                     <div class="footer-bottom__column">
                         <div class="footer-bottom__row">
                             <div class="footer-bottom__left">
@@ -5311,9 +5911,212 @@
     </div>
 </footer>
     </div>
+    <div id="modal-consultation" class="popup modal-consultation">
+    <div class="modal-consultation__body popup__body">
+        <div class="modal-consultation__content popup__content">
+            <button type="button" class="modal-consultation__close close-popup">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_4944_21359" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                        width="40" height="40">
+                        <rect width="40" height="40" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_4944_21359)">
+                        <path
+                            d="M10.6666 31.6666L8.33325 29.3333L17.6666 19.9999L8.33325 10.6666L10.6666 8.33325L19.9999 17.6666L29.3333 8.33325L31.6666 10.6666L22.3333 19.9999L31.6666 29.3333L29.3333 31.6666L19.9999 22.3333L10.6666 31.6666Z"
+                            fill="white" />
+                    </g>
+                </svg>
+            </button>
+            <div class="modal-consultation__content-body">
+                <div class="modal-consultation__columns">
+                    <div class="modal-consultation__column">
+                        <div class="modal-consultation__image">
+                            <img src="img/modals/01.jpg" alt="modals">
+                        </div>
+                    </div>
+                    <div class="modal-consultation__column">
+                        <div class="feedback__item">
+                            <h2 class="feedback__title title">
+                                Получить консультацию 
+                            </h2>
+                        </div>
+                        <div class="feedback__item">
+                            <div class="feedback__label">
+                                Просто позвоните по номеру <br> <a href="tel:+74991124137" class="feedback__link">+7
+                                    (499) 112 41 37</a>
+                                или заполните форму обратной связи:
+                            </div>
+                        </div>
+                        <div class="feedback__item">
+                            <form action="#" id="form" class="feedback__form form">
+                                <div class="form__item form-item">
+                                    <input type="text" class="form__input input">
+                                    <label for="" class="form__label form-label">ФИО</label>
+                                </div>
+                                <div class="form__item form-item">
+
+                                    <input type="tel" class="form__input input tel _req">
+                                    <label for="" class="form__label form-label">Телефон</label>
+                                </div>
+                                <div class="form__item ">
+                                    <button class="form__button button">
+                                        Отправить
+                                    </button>
+                                </div>
+                                <div class="form__item">
+                                    <div class="form__checkbox checkbox">
+                                        Согласен с обработкой моих персональных данных в соответствии с политикой
+                                        конфиденциальности
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="modal-consultation-2" class="popup modal-consultation">
+    <div class="modal-consultation__body popup__body">
+        <div class="modal-consultation__content modal-consultation__content_form popup__content">
+            <button type="button" class="modal-consultation__close close-popup">
+                <img src="img/icons/close.svg" alt="">
+            </button>
+            <div class="modal-consultation__content-body">
+                <div class="modal-consultation__columns">
+                    
+                    <div class="modal-consultation__form">
+                        <div class="feedback__item">
+                            <h2 class="feedback__title title">
+                                Задать вопрос
+                            </h2>
+                        </div>
+                        <div class="feedback__item">
+                            <form action="#" id="form" class="feedback__form form">
+                                <div class="form__item form-item">
+                                    <input type="text" class="form__input input">
+                                    <label for="" class="form__label form-label">ФИО</label>
+                                </div>
+                                <div class="form__item form-item">
+
+                                    <input type="tel" class="form__input input _mail _req">
+                                    <label for="" class="form__label form-label">Email</label>
+                                </div>
+                                <div class="form__item form-item">
+
+                                    <textarea type="text" class="form__input input form__textarea _req"></textarea>
+                                    <label for="" class="form__label form-label">Вопрос</label>
+                                </div>
+                                <div class="form__item ">
+                                    <button class="form__button button">
+                                        Отправить
+                                    </button>
+                                </div>
+                                <div class="form__item">
+                                    <div class="form__checkbox checkbox">
+                                        Согласен с обработкой моих персональных данных в соответствии с политикой
+                                        конфиденциальности
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="modal-message" class="popup modal-message modal-consultation">
+    <div class="modal-consultation__body modal-message__body popup__body">
+        <div class="modal-consultation__content modal-message__content popup__content">
+            <button type="button" class="modal-consultation__close close-popup">
+                <img src="img/icons/close.svg" alt="">
+            </button>
+            <div class="modal-message__content-body">
+                <div class="modal-message__title">
+                    Наименование вопроса Значимость этих проблем настолько очевидна, что укрепление и развитие 
+                </div>
+                <div class="modal-message__text">
+                    <p>
+                        Наименование вопроса Значимость этих проблем настолько очевидна, что укрепление и развитие 
+                        Значимость этих проблем настолько очевидна, что укрепление и развитие структуры позволяет выполнять важные задания по разработке модели развития. Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельностий
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     
+<div id="modal-summary" class="popup summary modal-consultation">
+    <div class="modal-consultation__body summary__body popup__body">
+        <div class="modal-consultation__content summary__content modal-consultation__content_form popup__content">
+            <button type="button" class="modal-consultation__close close-popup">
+                <img src="img/icons/close.svg" alt="">
+            </button>
+            <div class="summary__content-body summary-content" >
+                <div class="modal-consultation__form">
+                    <div class="feedback__item">
+                        <h3 class="feedback__title title">
+                            Резюме
+                        </h3>
+                    </div>
+                    <div class="feedback__item">
+                        <form action="#" id="form" class="feedback__form form">
+                            <div class="form__item form-item">
+                                <input type="text" class="form__input input">
+                                <label for="" class="form__label form-label">ФИО</label>
+                            </div>
+                            <div class="form__item form-item">
+
+                                <input type="tel" class="form__input input _mail _req">
+                                <label for="" class="form__label form-label">Email</label>
+                            </div>
+                            <div class="form__item form-item">
+
+                                <input type="tel" class="form__input input tel _req _tel">
+                                <label for="" class="form__label form-label">Телефон</label>
+                            </div>
+                            <div class="form__item form-item">
+
+                                <input type="tel" class="form__input input  _req">
+                                <label for="" class="form__label form-label">Ссылка на резюме</label>
+                            </div>
+                            <div class="form__item form-item">
+                                <div class="quiz__file-form">
+                                    <input id="fileInput" type="file" accept=".pdf" class="quiz__file">
+                                    <button id="fileButton" type="button" class="quiz__file-button  form-item__file-button">
+                                        Загрузите или перетащите файл резюме <br> Не более XX МБ.
+                                    </button>
+                                </div>
+                                <div id="filePreview" class="quiz__preview-wrapper">
+                                    
+                                </div>
+                            </div>
+                            <div class="form__item ">
+                                <button class="form__button summary__button button">
+                                    Отправить резюме
+                                </button>
+                            </div>
+                            <div class="form__item">
+                                <div class="form__checkbox checkbox">
+                                    Согласен с обработкой моих персональных данных в соответствии с политикой
+                                    конфиденциальности
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1.73/?apikey=b231b81d-f535-4d7c-a0f6-75122791fd24&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<b231b81d-f535-4d7c-a0f6-75122791fd24>&lang=ru_RU"></script>
+    <!-- <script src="https://api-maps.yandex.ru/3.0/?apikey=&lang=ru_RU" type="text/javascript"></script> -->
+    <script src="js/map.js"></script>
     <script src="js/app.js"></script>
     
     </script>

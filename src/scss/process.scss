@@ -9,12 +9,15 @@
 
     &__top {
         @include adaptiv-value("margin-bottom", 60, 35, 1);
+        overflow: hidden;
     }
 
     &__label {
+        transform: translate(-150%,0);
     }
 
     &__title {
+        transform: translate(150%,0);
         @media(max-width:492px) {
             br {
                 display: none;
@@ -26,6 +29,8 @@
     }
 
     &__video {
+        transform: translate(0,0);
+        transition: all 0.8s ease 0s;
         position: relative;
         padding-bottom: 49.3%;
         @include adaptiv-value("margin-bottom", 60, 35, 1);
@@ -35,6 +40,7 @@
             height: 100%;
             top: 0;
             left: 0;
+            object-fit: cover;
         }
     }
 

@@ -12,6 +12,7 @@
 
     &__columns {
         display: flex;
+        overflow: hidden;
         @media(max-width:1024px) {
             display: block;
         }
@@ -36,9 +37,11 @@
                 display: none;
             }
         }
+        transform: translate(150%,0);
     }
 
     &__button {
+        transform: translate(-150%,0);
         @media(max-width:350px) {
             gap: 10px;
         }

@@ -12,12 +12,15 @@
 
     &__top {
         margin-bottom: 12px;
+        overflow: hidden;
         @media(max-width:1024px) {
             margin-bottom: 24px;
         }
     }
 
     &__title {
+        transition: all 0.8s ease 0s;
+        transform: translate(-150%,0);
         @media(max-width:1024px) {
             margin-bottom: 24px;
             
@@ -29,6 +32,7 @@
 
     &__mobile-label {
         display: none;
+        transition: all 0.8s ease 0s;
         @media(max-width:1024px) {
             display: block;
             
@@ -85,6 +89,7 @@
 .power-row {
     width: 100%;
     display: flex;
+    overflow: hidden;
     gap: 8px;
     align-items: end;
     
@@ -111,7 +116,7 @@
         align-items: center;
         justify-content: center;
         gap: 10px;
-        transition: all 0.4s ease 0s;
+        transition: all 0.8s ease 0s;
         border-radius: 4px;
         background: rgba(92, 151, 0, 0.32);
         height: 43px;
@@ -296,24 +301,38 @@
     &__content {
         display: flex;
         align-items: center;
+        overflow: hidden;
         justify-content: space-between;
-        @media(max-width:600px) {
-            display: block;
+        @media(max-width:1024px) {
+            flex-direction: column;
+            align-items: start;
+            gap: 24px;
         }
+        // @media(max-width:600px) {
+        //     display: block;
+        // }
     }
 
-    &__left {}
+    &__left {
+        @media(max-width:1024px) {
+            width: 100%;
+        }
+        transform: translate(-150%,0);
+        transition: all 0.8s ease 0s;
+    }
 
     &__form {}
 
     &__right {
+        transform: translate(150%,0);
+        transition: all 0.8s ease 0s;
         text-align: right;
 
         a {
             display: block;
         }
         @media(max-width:1024px) {
-            display: none;
+            align-self: end;
         }
     }
 
@@ -323,7 +342,11 @@
         color: #007BFC;
         margin-bottom: 8px;
         line-height: 130%;
-
+        text-decoration-skip-ink:none;
+        transition: all 0.4s ease 0s;
+        &:hover {
+            opacity: 0.7;
+        }
         &:last-child {
             margin: 0;
 
@@ -331,6 +354,9 @@
 
         &:hover {
             text-decoration: underline;
+        }
+        @media(max-width:767px) {
+            font-size: 18px;
         }
 
     }
@@ -403,6 +429,9 @@
         font-size: 14px;
         &:before {
             display: none;
+        }
+        @media(max-width:1270px) {
+            font-size: 14px;
         }
         @media(max-width:600px) {
             width: 100%;

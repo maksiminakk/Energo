@@ -29,14 +29,17 @@
 
     &__top {
         @include adaptiv-value("margin-bottom", 70, 40, 1);
+        overflow: hidden;
 
     }
 
     &__label {
         line-height: 160%;
+        transform: translate(150%,0)
     }
 
     &__title {
+        transform: translate(-150%,0);
         @media(max-width:492px) {
             span {
                 display: none;
@@ -102,7 +105,7 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
-        
+        overflow: hidden;
     }
 
     &__item {
@@ -115,6 +118,38 @@
         @media(max-width:492px) {
             padding: 12px;
         }
+        transition: all 0.8s ease 0s;
+        &:nth-child(2) {
+            transition: all 0.8s ease 0.1s;
+        }
+        &:nth-child(3) {
+            transition: all 0.8s ease 0.2s;
+        }
+        &:nth-child(4) {
+            transition: all 0.8s ease 0.3s;
+        }
+        &:nth-child(5) {
+            transition: all 0.8s ease 0.4s;
+        }
+        &:nth-child(6) {
+            transition: all 0.8s ease 0.5s;
+        }
+        &:nth-child(7) {
+            transition: all 0.8s ease 0.6s;
+        }
+        &:nth-child(8) {
+            transition: all 0.8s ease 0.7s;
+        }
+        &:nth-child(9) {
+            transition: all 0.8s ease 0.8s;
+        }
+        &:nth-child(10) {
+            transition: all 0.8s ease 0.9s;
+        }
+        &:nth-child(11) {
+            transition: all 0.8s ease 1s;
+        }
+
     }
 
     &__icon {

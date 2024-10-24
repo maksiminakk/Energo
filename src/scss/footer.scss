@@ -2,12 +2,15 @@
     color: #fff;
     background-color: #000;
     @include adaptiv-value("padding-top", 70, 40, 1);
-
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    
     a {
         color: #fff;
     }
 
-    &__container {}
+    &__container {
+        overflow: hidden;
+    }
 
     &__body {}
 
@@ -24,15 +27,35 @@
             flex-direction: column;
             border: none;
         }
+        
+
     }
 
     &__column {
+        transition: all 0.8s ease 0s;
         &:first-child {
             flex: 0 1 37.17%;
+            transform: translate(-150%,0);
         }
 
         &:last-child {
             flex: 0 1 63.83%;
+            transform: translate(0, -150%);
+            transition: all 0.8s ease 0s;
+        }
+        
+    }
+
+    &__columns {
+        &._visible {
+            .footer__column {
+                &:first-child {
+                    transform: translate(0,0);
+                }
+                &:last-child {
+                    transform: translate(0, 0);
+                }
+            }
         }
     }
 
@@ -100,10 +123,20 @@
     }
 
     &__list {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 50px;
+        row-gap: 8px;
+        @media(max-width:1024px) {
+            grid-template-columns: repeat(2, auto);
+            
+        }
+        @media(max-width:767px) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 0;
+        }
         li {
+            
             @media(max-width:767px) {
                 border-bottom: 1px solid rgba(196, 196, 196, 0.24);
                 &:first-child {
@@ -147,6 +180,17 @@
         flex: auto;
         @media(max-width:767px) {
             flex: 1 1 100%;
+        }
+        @media(max-width:492px) {
+            &:first-child {
+                order: 2;
+            }
+            &:nth-child(2) {
+                order: 3;
+            }
+            &:last-child {
+                order: 1;
+            }
         }
     }
 

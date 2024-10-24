@@ -16,7 +16,10 @@
     &__steps {
         position: relative;
         overflow: hidden;
-
+        transform: perspective(600px) translate(150%,0%) rotateX(45deg);
+        &._visible {
+            transform: inherit;
+        }
     }
 
     &__step {
@@ -34,6 +37,12 @@
             opacity: 1;
             transform: translate(0, 0);
         }
+        @media(max-width:767px) {
+            padding: 24px;
+        }
+        @media(max-width:492px) {
+            padding: 16px;
+        }
     }
 
     &__title {
@@ -46,6 +55,14 @@
     &__row {
         display: flex;
         gap: 32px;
+        @media(max-width:767px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media(max-width:492px) {
+            grid-template-columns: repeat(1 , 1fr);
+            gap: 24px;
+        }
     }
 
     &__item {
@@ -93,6 +110,7 @@
         height: 100%;
         top: 0;
         left: 0;
+        z-index: 1;
         position: absolute;
         cursor: pointer;
     }
